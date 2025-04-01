@@ -4,8 +4,15 @@ import {
   mantineHtmlProps,
   MantineProvider,
 } from "@mantine/core";
+import { Red_Hat_Display } from "next/font/google";
 import theme from "./theme";
 import "./globals.css";
+
+const redHatDisplay = Red_Hat_Display({
+  subsets: ["latin"], // Choose subsets you need
+  weight: ["400", "500", "700"], // Choose weights you need
+  variable: "--font-red-hat-display", // Tailwind variable for easy access
+});
 
 export const metadata: Metadata = {
   title: "Next App Mantine Tailwind Template",
@@ -22,7 +29,7 @@ export default function RootLayout({
       <head>
         <ColorSchemeScript />
       </head>
-      <body className="antialiased">
+      <body className={redHatDisplay.variable}>
         <MantineProvider theme={theme}>{children}</MantineProvider>
       </body>
     </html>

@@ -1,2 +1,7 @@
 @import "tailwind-preset-mantine";
 @import "./theme.css";
+
+body {
+  background-color: #0d0b1a;
+  font-family: "Red Hat Display", sans-serif;
+}
