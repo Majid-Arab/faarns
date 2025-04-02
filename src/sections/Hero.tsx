@@ -13,7 +13,6 @@ const Hero = () => {
           width={500}
           height={500}
           className="w-[50px] h-[60px]"
-          objectFit="cover"
         />
         {/* // Animated Light Bar that'll stretch on hover */}
         <div className="w-20 bg-black border-solid border-white border-2"></div>
