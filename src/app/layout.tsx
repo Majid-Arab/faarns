@@ -9,9 +9,9 @@ import theme from "./theme";
 import "./globals.css";
 
 const redHatDisplay = Red_Hat_Display({
-  subsets: ["latin"], // Choose subsets you need
-  weight: ["400", "500", "700"], // Choose weights you need
-  variable: "--font-red-hat-display", // Tailwind variable for easy access
+  subsets: ["latin"],
+  weight: ["400", "500", "700"],
+  variable: "--font-red-hat-display",
 });
 
 export const metadata: Metadata = {
