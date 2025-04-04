@@ -1,3 +1,4 @@
+import NeonLine from "@/components/tubeLight";
 import { Box, Button, Group } from "@mantine/core";
 import Image from "next/image";
 
@@ -15,7 +16,7 @@ const Hero = () => {
           className="w-[50px] h-[60px]"
         />
         {/* // Animated Light Bar that'll stretch on hover */}
-        <div className="w-20 bg-black border-solid border-white border-2"></div>
+        <NeonLine />
         {/* Button  */}
         <Button
           variant="light"
