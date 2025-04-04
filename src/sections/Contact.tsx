@@ -8,20 +8,22 @@ const Contact = () => {
     <Box>
       <Group
         justify="space-between"
-        align="flex-end"
-        className="max-w-7xl m-auto"
+        className="md:max-w-7xl m-auto flex-col md:flex-row items-center md:items-end px-2"
         wrap="nowrap"
       >
-        <Text className="max-w-[280px] text-[25px]">
-          Generating leads is the first step;{" "}
-          <span className="font-bold">true profit</span> comes from converting
-          those leads into long-term <span className="font-bold">client</span>
-        </Text>
+        <div className="flex justify-start w-full">
+          <Text className="max-w-[250px] md:max-w-[280px] text text-xl md:text-[25px]">
+            Generating leads is the first step;{" "}
+            <span className="font-bold font-playfair italic text-[24px]">true profit</span> comes from converting
+            those leads into long-term <span className="font-bold font-playfair italic text-[24px]">client</span>
+          </Text>
+        </div>
         <Button
           variant="white"
           color="black"
           size="xl"
           radius="md"
+          className="max-w-32"
           style={{
             borderRadius: "12px",
             boxShadow: "0 0 12px 4px rgba(128, 0, 128, 0.3)",
@@ -29,13 +31,15 @@ const Contact = () => {
         >
           Book a free call
         </Button>
-        <Text className="max-w-[280px] text-[22px] text-center">
-          Got <span className="font-bold">marketing</span> questions? Book a
-          free call and see why we’re the
-          <span className="font-bold"> right fit</span> for you.
-        </Text>
+        <div className="flex justify-end w-full">
+          <Text className="max-w-[250px] md:max-w-[280px] md:text-xl text-xl md:text-[22px] text-center">
+            Got <span className="font-bold font-playfair italic text-[24px]">marketing</span> questions? Book a
+            free call and see why we’re the
+            <span className="font-bold font-playfair italic text-[24px]"> right fit</span> for you.
+          </Text>
+        </div>
       </Group>
-      <ImageGallery />
+      {/* <ImageGallery /> */}
       <ClientLogos />
     </Box>
   );
