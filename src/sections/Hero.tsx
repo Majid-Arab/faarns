@@ -23,7 +23,7 @@ const Hero = () => {
           color="#fff"
           size="md"
           radius="xl"
-          className="px-3 tracking-wide"
+          className="text-xs md:text-md md:px-3 tracking-wide"
         >
           Leading Marketing Agency
         </Button>
