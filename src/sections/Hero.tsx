@@ -7,7 +7,7 @@ import React from "react";
 const Hero = () => {
   return (
     <Box className="flex flex-col items-center justify-center h-screen">
-      <Box className="flex flex-col items-center justify-center gap-2">
+      <Box className="flex flex-col items-center justify-center gap-1">
         <Image
           src="/assets/logo.png"
           alt="Logo"
