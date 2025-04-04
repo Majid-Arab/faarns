@@ -39,7 +39,7 @@ const Contact = () => {
           </Text>
         </div>
       </Group>
-      {/* <ImageGallery /> */}
+      <ImageGallery />
       <ClientLogos />
     </Box>
   );
