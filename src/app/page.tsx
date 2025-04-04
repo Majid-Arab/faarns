@@ -6,13 +6,13 @@ import Services from "@/sections/Services";
 
 export default function Home() {
   return (
-    <>
+    <div className="pb-10">
       <Header />
       <Hero />
       <Contact />
       <Services />
       <OurWork />
       {/* <WhyUs /> */}
-    </>
+    </div>
   );
 }
