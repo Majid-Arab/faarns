@@ -3,8 +3,8 @@
 @import "./theme.css";
 
 @theme {
-  --font-playfair: "Playfair Dispaly", sans-serif;
-  --font-redhat: "Red Hat Display", sans-serif;
+  --font-playfair: "Playfair Dispaly";
+  --font-redhat: "Red Hat Display";
   --breakpoint-*: initial;
   --breakpoint-sm: 480px;
   --breakpoint-md: 765px;
