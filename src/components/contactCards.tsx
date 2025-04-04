@@ -4,7 +4,6 @@ import { useState } from "react";
 import { Container, Card, Image } from "@mantine/core";
 
 export default function ImageGallery() {
-  // Sample image sources - replace with your actual images
   const [images] = useState([
     "/assets/image.png",
     "/assets/image.png",
@@ -14,15 +13,7 @@ export default function ImageGallery() {
   ]);
 
   return (
-    <Container className="flex justify-center items-center w-full gap-5 py-5">
-      {/* <Box
-        className="flex justify-around w-full"
-        // breakpoints={[
-        //   { maxWidth: "md", cols: 3 },
-        //   { maxWidth: "sm", cols: 2 },
-        //   { maxWidth: "xs", cols: 1 },
-        // ]}
-      > */}
+    <Container className="flex justify-center items-center w-full gap-5 py-5 overflow-hidden">
       {images.map((src, index) => (
         <div
           key={index}
@@ -48,7 +39,6 @@ export default function ImageGallery() {
           </Card>
         </div>
       ))}
-      {/* </Box> */}
     </Container>
   );
 }
