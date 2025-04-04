@@ -29,8 +29,8 @@ const Hero = () => {
         </Button>
       </Box>
       <Box className="leading-none">
-        <h1 className="text-[300px] font-bold uppercase m-0 p-0">Faarns</h1>
-        <Group className="text-lg font-bold -mt-2" justify="space-between">
+        <h1 className="text-7xl  sm:text-8xl md:text-[200px] lg:text-[300px] font-bold uppercase m-0 p-0">Faarns</h1>
+        <Group className="text-xs md:text-lg font-bold -mt-[10px] md:-mt-2" justify="space-between">
           <span>Website</span>
           <span>Marketing</span>
           <span>Saas</span>
