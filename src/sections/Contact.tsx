@@ -18,19 +18,20 @@ const Contact = () => {
             those leads into long-term <span className="font-bold font-playfair italic text-[24px]">client</span>
           </Text>
         </div>
-        <Button
-          variant="white"
-          color="black"
-          size="xl"
-          radius="md"
-          className="max-w-32"
-          style={{
-            borderRadius: "12px",
-            boxShadow: "0 0 12px 4px rgba(128, 0, 128, 0.3)",
-          }}
-        >
-          Book a free call
-        </Button>
+        <div className="flex justify-center items-center w-full">
+          <Button
+            variant="white"
+            color="black"
+            size="xl"
+            radius="md"
+            style={{
+              borderRadius: "12px",
+              boxShadow: "0 0 12px 4px rgba(128, 0, 128, 0.3)",
+            }}
+          >
+            Book a free call
+          </Button>
+        </div>
         <div className="flex justify-end w-full">
           <Text className="max-w-[250px] md:max-w-[280px] md:text-xl text-xl md:text-[22px] text-center">
             Got <span className="font-bold font-playfair italic text-[24px]">marketing</span> questions? Book a
