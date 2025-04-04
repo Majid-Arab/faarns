@@ -1,5 +1,5 @@
 import { Header } from "@/components/header";
-import Contact from "@/sections/Contac";
+import Contact from "@/sections/Contact";
 import Hero from "@/sections/Hero";
 import OurWork from "@/sections/ourWork";
 import Services from "@/sections/Services";
