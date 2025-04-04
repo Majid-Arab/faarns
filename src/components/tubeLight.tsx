@@ -14,11 +14,11 @@ export default function NeonLine() {
       >
         {/* Neon line container */}
         <div
-          className={`relative transition-all duration-500 ease-in-out ${isHovered ? 'w-40' : 'w-20'
+          className={`relative transition-all duration-500 ease-in-out mb-2 ${isHovered ? 'w-40' : 'w-20'
             }`}
         >
           {/* Main neon line - brighter */}
-          <div className="absolute top-0 left-0 right-0  bg-purple-300  shadow-xl shadow-cyan-400/70">
+          <div className="absolute -top-2 left-0 right-0  bg-purple-300  shadow-xl shadow-cyan-400/70">
           </div>
 
           {/* Enhanced bottom center glow effect */}
