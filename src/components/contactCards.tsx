@@ -5,11 +5,13 @@ import { Container, Card, Image } from "@mantine/core";
 
 export default function ImageGallery() {
   const [images] = useState([
-    "/assets/image.png",
-    "/assets/image.png",
-    "/assets/image.png",
-    "/assets/image.png",
-    "/assets/image.png",
+    "/assets/cosmic.jpeg",
+    "/assets/custom-web.jpeg",
+    "/assets/enagic-affiliate.jpeg",
+    "/assets/faarns.jpeg",
+    "/assets/potential.jpeg",
+    "/assets/web-automation.jpeg",
+    "/assets/words-to-visual.jpeg",
   ]);
 
   return (
