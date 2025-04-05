@@ -14,8 +14,8 @@ const Services = () => {
         Our Services
       </Button>
 
-      <Title order={1} size={40}>
-        We create <span className="italic">brand</span> that make an <span className="italic">impact</span>.
+      <Title order={1} className="text-4xl md:text-5xl text-center">
+        We create <span className="font-bold font-playfair italic text-[40px] md:text-[52px]">brand</span> that make an <span className="font-bold font-playfair italic text-[40px]  md:text-[52px]">impact</span>.
       </Title>
 
       <ServiceCard />
