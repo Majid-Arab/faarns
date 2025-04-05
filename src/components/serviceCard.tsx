@@ -64,5 +64,5 @@ export function ServiceCard() {
       </div>
     </Card>
   ));
-  return <Box className="w-60 flex flex-col gap-5">{cards}</Box>;
+  return <Box className="flex flex-col gap-5 mx-2 lg:max-w-60 py-5">{cards}</Box>;
 }

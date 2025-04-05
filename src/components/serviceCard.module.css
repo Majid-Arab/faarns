@@ -13,6 +13,12 @@
   }
 }
 
+@media (max-width: 36em) {
+  .card {
+    height: 300px;
+  }
+}
+
 .image {
   position: absolute;
   inset: 0;
@@ -48,12 +54,24 @@
   font-size: 30px;
 }
 
+@media (max-width: 36em) {
+  .title {
+    font-size: 22px;
+  }
+}
+
 .bodyText {
   color: var(--mantine-color-dark-2);
   margin-left: 7px;
 }
 
 .description {
-  color: var(--mantine-color-dark-2);
+  color: #fff;
   font-size: 20px;
+}
+
+@media (max-width: 40em) {
+  .description {
+    font-size: 16px;
+  }
 }
