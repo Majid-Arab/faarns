@@ -108,13 +108,12 @@ export const InfiniteMovingLogos = ({
         )}
       >
         {logoImages.map((src, index) => (
-          <div key={index} className="flex items-center justify-center">
+          <div key={index} className="flex items-center justify-center max-w-[100px]">
             <Image
               src={src}
               alt={`Client logo ${index + 1}`}
-              width={100}
-              height={50}
-              className="object-contain"
+              width={500}
+              height={500}
             />
           </div>
         ))}
