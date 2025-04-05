@@ -9,7 +9,7 @@ const Services = () => {
         radius="xl"
         size='xl'
         variant='light'
-        className="text-2xl text-white text-center flex justify-center items-center gap-2 transition-colors inset-shadow-sm inset-shadow-[#7057F1]"
+        className="text-xl md:text-2xl text-white text-center flex justify-center items-center gap-2 transition-colors inset-shadow-sm inset-shadow-[#7057F1]"
       >
         Our Services
       </Button>
