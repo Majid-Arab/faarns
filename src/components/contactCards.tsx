@@ -13,7 +13,7 @@ export default function ImageGallery() {
   ]);
 
   return (
-    <Container className="flex flex-wrap lg:flex-nowrap  w-full justify-center items-center gap-4 py-5">
+    <Container className="flex flex-wrap lg:flex-nowrap w-full justify-center items-center gap-5 py-5">
       {images.map((src, index) => (
         <div
           key={index}
