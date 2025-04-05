@@ -13,19 +13,17 @@ export default function ImageGallery() {
   ]);
 
   return (
-    <Container className="flex justify-center items-center w-full gap-5 py-5 overflow-hidden">
+    <Container className="flex flex-wrap lg:flex-nowrap  w-full justify-center items-center gap-4 py-5">
       {images.map((src, index) => (
         <div
           key={index}
           className="transform transition-all duration-300 hover:scale-105"
         >
           <Card
-            className=""
             styles={() => ({
               root: {
                 borderRadius: "12px",
                 boxShadow: "0 0 12px 4px rgba(128, 0, 128, 0.3)",
-                margin: "8px",
               },
             })}
           >
@@ -33,7 +31,7 @@ export default function ImageGallery() {
               <Image
                 src={src}
                 alt={`Image ${index + 1}`}
-                className="w-full h-full"
+                className="w-full h-full object-cover"
               />
             </Card.Section>
           </Card>
