@@ -11,7 +11,6 @@ const OurWork = () => {
                 <Image src="/assets/image.png" alt='Dots' height={500} width={500} className='max-w-[500px] h-20 rounded-md   ' />
                 <Image src="/assets/image.png" alt='Dots' height={500} width={500} className='max-w-[500px] h-20 rounded-md   ' />
                 <Image src="/assets/image.png" alt='Dots' height={500} width={500} className='max-w-[500px] h-20 rounded-md   ' />
-
             </div>
             {/* Centered Content  */}
             <div className='bg-white rounded-2xl flex flex-col justify-center items-center gap-2'>
