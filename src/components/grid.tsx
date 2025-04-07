@@ -1,4 +1,4 @@
-import { Container, Grid, GridCol, Text, Title } from '@mantine/core';
+import { Box, Container, Grid, GridCol, Group, Text, Title } from '@mantine/core';
 import { GridCard } from './GridCard';
 import { IconColorSwatch } from '@tabler/icons-react';
 
@@ -47,31 +47,31 @@ export function LeadGrid() {
 
                 {/* Second Column (Narrower) */}
                 <GridCol span={4}>
-                    <Grid
-                        className="bg-[linear-gradient(308.04deg,_#F0F4F9_4.87%,_#B3C3D8_100%)] text-black p-2 rounded-md h-full"
+                    <Box
+                        className="bg-[linear-gradient(154.5deg,_#F0F4F9_0%,_#9CB1CB_100%)] text-black p-2 rounded-3xl h-full"
                         style={{ height: '100%' }}
                     >
-                        <GridCol span={12} className="flex flex-col justify-between h-full">
+                        <Box className="flex flex-col justify-between h-full">
                             {/* Top Text */}
-                            <Grid>
+                            <Box flex={1}>
                                 <Text fw={600} className='text-2xl'>
                                     With years of expertise, custom solutions, and a customer-first approach, we deliver proven results and build long-term partnerships. Choose us for innovative strategies and unmatched dedication to your success.
                                 </Text>
-                            </Grid>
+                            </Box>
 
                             {/* Bottom Metrics */}
-                            <Grid>
-                                <GridCol span={6} className="text-center">
+                            <Group justify="space-around">
+                                <Box className="text-center">
                                     <Title>500%</Title>
                                     <Text fw={600} size="md">Average ROI</Text>
-                                </GridCol>
-                                <GridCol span={6} className="text-center">
+                                </Box>
+                                <Box className="text-center">
                                     <Title>10k+</Title>
                                     <Text fw={600} size="md">Leads/month</Text>
-                                </GridCol>
-                            </Grid>
-                        </GridCol>
-                    </Grid>
+                                </Box>
+                            </Group>
+                        </Box>
+                    </Box>
                 </GridCol>
 
             </Grid>

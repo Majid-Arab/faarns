@@ -1,4 +1,4 @@
-import { Paper, Text, ThemeIcon } from '@mantine/core';
+import { Box, Center, Group, Paper, Text, ThemeIcon } from '@mantine/core';
 
 type Prop = {
     icon: React.ElementType;
@@ -8,19 +8,19 @@ type Prop = {
 
 export function GridCard({ icon: Icon, title, description }: Prop) {
     return (
-        <Paper withBorder radius="md" className="p-2 text-black bg-[linear-gradient(308.04deg,_#F0F4F9_4.87%,_#B3C3D8_100%)]">
+        <Paper withBorder className="px-[25px] py-[15px] rounded-3xl text-black bg-[linear-gradient(308.04deg,_#F0F4F9_4.87%,_#B3C3D8_100%)]">
             <ThemeIcon
                 size="xl"
                 radius="xl"
                 variant="outline"
                 color='black'
             >
-                <Icon size={28} stroke={1.5} />
+                <Icon size={50} stroke={2} />
             </ThemeIcon>
-            <Text className='text-2xl' fw={900} mt="md">
+            <Text className='text-4xl' fw={900} mt="md">
                 {title}
             </Text>
-            <Text size="lg" mt="sm">
+            <Text size="" mt="sm">
                 {description}
             </Text>
         </Paper>
