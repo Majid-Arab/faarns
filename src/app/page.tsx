@@ -1,8 +1,10 @@
 import { Header } from "@/components/header";
+import CaseStudies from "@/sections/CaseStudies";
 import Contact from "@/sections/Contact";
 import Hero from "@/sections/Hero";
 import OurWork from "@/sections/ourWork";
 import Services from "@/sections/Services";
+import WhyUs from "@/sections/WhyUs";
 
 export default function Home() {
   return (
@@ -12,7 +14,8 @@ export default function Home() {
       <Contact />
       <Services />
       <OurWork />
-      {/* <WhyUs /> */}
+      <WhyUs />
+      <CaseStudies />
     </div>
   );
 }
