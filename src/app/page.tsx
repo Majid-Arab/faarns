@@ -9,7 +9,7 @@ import WhyUs from "@/sections/WhyUs";
 export default function Home() {
   return (
     <div className="pb-10">
-      <Header />
+      {/* <Header /> */}
       <Hero />
       <Contact />
       <Services />
