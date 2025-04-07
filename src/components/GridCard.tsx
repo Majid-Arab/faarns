@@ -17,7 +17,7 @@ export function GridCard({ icon: Icon, title, description }: Prop) {
             >
                 <Icon size={28} stroke={1.5} />
             </ThemeIcon>
-            <Text size="xl" fw={900} mt="md">
+            <Text className='text-2xl' fw={900} mt="md">
                 {title}
             </Text>
             <Text size="lg" mt="sm">
