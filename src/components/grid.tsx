@@ -80,7 +80,7 @@ export function LeadGrid() {
             <Box className="flex flex-col justify-between h-full">
               {/* Top Text */}
               <Box flex={1}>
-                <Text fw={500} className="text-3xl">
+                <Text fw={500} className="text-2xl mb-5 md:text-3xl">
                   With years of expertise, custom solutions, and a
                   customer-first approach, we deliver proven results and build
                   long-term partnerships. Choose us for innovative strategies
@@ -91,18 +91,18 @@ export function LeadGrid() {
               {/* Bottom Metrics */}
               <Group justify="space-around">
                 <Box className="text-center">
-                  <Title size={60} fw={600}>
+                  <Title size={60} fw={600} className="text-4xl md:text-6xl">
                     500%
                   </Title>
-                  <Text fw={500} size="20px">
+                  <Text fw={500} className="text-lg md:text-xl">
                     Average ROI
                   </Text>
                 </Box>
                 <Box className="text-center">
-                  <Title size={60} fw={600}>
+                  <Title size={60} fw={600} className="text-4xl md:text-6xl">
                     10k+
                   </Title>
-                  <Text fw={500} size="20px">
+                  <Text fw={500} className="text-lg md:text-xl">
                     Leads/month
                   </Text>
                 </Box>
