@@ -5,6 +5,7 @@
 @theme {
   --font-playfair: "Playfair Dispaly";
   --font-redhat: "Red Hat Display";
+  --bg-light: "rgba(255, 255, 255, 0.15)";
   --breakpoint-*: initial;
   --breakpoint-sm: 480px;
   --breakpoint-md: 765px;
