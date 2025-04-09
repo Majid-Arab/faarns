@@ -1,17 +1,16 @@
 import { CaseStudyCard } from "@/components/CaseStudyCard";
-import { ThemeIcon, Title, Text, Group, Box } from "@mantine/core";
-import { IconColorSwatch } from "@tabler/icons-react";
+import { Title, Group, Grid, GridCol } from "@mantine/core";
 import Image from "next/image";
 import React from "react";
 
 const CaseStudies = () => {
   return (
-    <section className="h-80 py-8 bg-white rounded-2xl flex justify-center relative">
+    <section className="h-80 py-8 bg-white rounded-2xl flex justify-center">
       <Title className="text-3xl md:text-5xl text-[rgba(0, 47, 64, 1)]">
         Case Studies
       </Title>
-      <Group>
-        <Box className="relative">
+      <Grid>
+        <GridCol span={6} className="relative">
           <Image
             src="/assets/casestudy.png"
             alt="Image"
@@ -27,11 +26,11 @@ const CaseStudies = () => {
             // className="absolute top-2 rounded-xl borer-solid border-4 border-white"
             className="absolute top-2 rounded-xl"
           />
-        </Box>
-        <Box>
+        </GridCol>
+        <GridCol span={6}>
           <CaseStudyCard />
-        </Box>
-      </Group>
+        </GridCol>
+      </Grid>
     </section>
   );
 };
