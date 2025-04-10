@@ -3,10 +3,10 @@ import { Badge, Card, Group, Text, Title } from "@mantine/core";
 
 export function CaseStudyCard() {
   return (
-    <Card bg="white" padding="lg" radius="md">
+    <Card bg="white" padding={0} radius="md" className="gap-1">
       <Group className="text-cyan-950">
-        <IconHomeFilled />
-        <Text>12 days left</Text>
+        <IconHomeFilled size={30} />
+        <Text className="font-bold text-[22px]">Realtors</Text>
       </Group>
 
       <Group>
@@ -20,17 +20,15 @@ export function CaseStudyCard() {
           12 days left
         </Badge>
       </Group>
-      <Title className="text-cyan-950" fw={500} mt="md">
+      <Title className="text-cyan-950" fw={500}>
         5.3 minor release (September 2022)
       </Title>
-      <Text fz="sm" c="dimmed" mt={5}>
+      <Text className="text-[25px] text-cyan-950">
         Form context management, Switch, Grid and Indicator components
         improvements, new hook and 10+ other changes
       </Text>
 
-      <Text c="dimmed" fz="sm" mt="md">
-        Tasks completed
-      </Text>
+      <Text className="text-[28px] text-cyan-950">4x traffic in 3 months</Text>
     </Card>
   );
 }
