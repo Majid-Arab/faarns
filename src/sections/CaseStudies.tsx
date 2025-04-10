@@ -5,14 +5,14 @@ import React from "react";
 
 const CaseStudies = () => {
   return (
-    <section className="h-fit py-8 bg-white rounded-2xl">
+    <section className="h-fit py-8 bg-white rounded-2xl px-2">
       <Title className="text-3xl text-cyan-950 text-center mb-3 md:text-5xl text-[rgba(0, 47, 64, 1)]">
         Case Studies
       </Title>
       <Grid justify="center" gutter={60}>
         <GridCol
-          span={4}
-          className="fix relative flex items-end justify-end h-fit mt-1"
+          span={{ base: 12, md: 4 }}
+          className="fix relative flex items-center justify-center md:items-end md:justify-end h-fit mt-1"
         >
           {/* Background Image */}
           <Image
@@ -20,7 +20,7 @@ const CaseStudies = () => {
             alt="Image"
             height={500}
             width={500}
-            className="rounded-4xl relative border-4 border-white shadow-lg z-2"
+            className="rounded-4xl relative top-2 border-4 border-white shadow-lg z-2"
           />
 
           {/* Foreground Image */}
@@ -33,7 +33,7 @@ const CaseStudies = () => {
           />
         </GridCol>
 
-        <GridCol span={4}>
+        <GridCol span={{ base: 12, md: 4 }}>
           <div className="flex flex-col gap-10">
             <CaseStudyCard />
             <CaseStudyCard />
