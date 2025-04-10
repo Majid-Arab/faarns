@@ -20,7 +20,7 @@ const CaseStudies = () => {
             alt="Image"
             height={500}
             width={500}
-            className="rounded-4xl relative top-2 border-4 border-white shadow-lg z-2"
+            className="rounded-4xl relative top-2 md:top-0 border-4 border-white shadow-lg z-2"
           />
 
           {/* Foreground Image */}

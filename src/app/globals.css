@@ -3,9 +3,9 @@
 @import "./theme.css";
 
 @theme {
-  --font-playfair: "Playfair Dispaly";
+  --font-playfair: "Playfair Display";
   --font-redhat: "Red Hat Display";
-  --text-navyblue: #003c78;
+  --text-navyblue: rgba(0, 60, 120, 1);
   --bg-light: rgba(255, 255, 255, 0.15);
   --breakpoint-*: initial;
   --breakpoint-sm: 480px;
