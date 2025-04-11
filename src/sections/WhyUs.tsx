@@ -11,7 +11,7 @@ const WhyUs = () => {
           Why Choose Us
         </button>
         <Title className="my-2 text-center md:text-start text-3xl md:text-5xl ">
-          <ItalicText text="Why" /> FAARNS is The
+          <ItalicText text="Why" /> FAARNS is The&nbsp;
           <ItalicText text="Right Choice" /> For You
         </Title>
         <LeadGrid />
