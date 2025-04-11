@@ -1,8 +1,10 @@
 import CaseStudies from "@/sections/CaseStudies";
 import Contact from "@/sections/Contact";
+import FAQ from "@/sections/FAQ";
 import Hero from "@/sections/Hero";
 import OurWork from "@/sections/ourWork";
 import Services from "@/sections/Services";
+import Socials from "@/sections/Socials";
 import WhyUs from "@/sections/WhyUs";
 
 export default function Home() {
@@ -15,6 +17,8 @@ export default function Home() {
       <OurWork />
       <WhyUs />
       <CaseStudies />
+      <FAQ />
+      <Socials />
     </div>
   );
 }
