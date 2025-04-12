@@ -28,8 +28,9 @@
   color: var(--mantine-color-blue-0);
   max-width: 300px;
 
-  @media (max-width: $mantine-breakpoint-sm) {
+  @media (max-width: 1200px) {
     max-width: 100%;
+    text-align: center;
   }
 }
 

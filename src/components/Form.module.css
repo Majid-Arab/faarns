@@ -19,6 +19,9 @@
   }
 
   @media (max-width: 450px) {
+    position: static;
+    width: 100%;
+    top: 50px;
     right: 0;
   }
 }
