@@ -80,7 +80,7 @@ export function LeadGrid() {
             <Box className="flex flex-col justify-between h-full">
               {/* Top Text */}
               <Box flex={1}>
-                <Text fw={500} className="text-2xl mb-5 md:text-3xl">
+                <Text fw={500} className="text-xl mb-5 md:text-3xl">
                   With years of expertise, custom solutions, and a
                   customer-first approach, we deliver proven results and build
                   long-term partnerships. Choose us for innovative strategies
