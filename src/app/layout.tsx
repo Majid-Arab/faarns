@@ -31,8 +31,10 @@ export default function RootLayout({
         <ColorSchemeScript />
       </head>
       <body className={redHatDisplay.variable}>
-        <Header />
-        <MantineProvider theme={theme}>{children}</MantineProvider>
+        <MantineProvider theme={theme}>
+          <Header />
+          {children}
+        </MantineProvider>
       </body>
     </html>
   );
