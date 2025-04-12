@@ -3,6 +3,10 @@
   padding-right: calc(var(--mantine-spacing-xl) * 5);
   padding-left: calc(var(--mantine-spacing-xl) * 5);
   padding-bottom: calc(var(--mantine-spacing-xl) * 2);
+  background-image: url("/assets/footerGradient.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
   border-top: 1px solid
     light-dark(var(--mantine-color-gray-2), var(--mantine-color-dark-5));
 
