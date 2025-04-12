@@ -62,9 +62,12 @@ export function Affiliate() {
               width={500}
               height={500}
               className="w-full"
-              objectPosition="center"
-              objectFit="cover"
-            />
+              style={{
+                maxWidth: "100%",
+                height: "auto",
+                objectFit: "cover",
+                objectPosition: "center"
+              }} />
           </div>
         </div>
       </div>

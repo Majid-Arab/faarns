@@ -14,7 +14,10 @@ const Hero = () => {
           width={500}
           height={500}
           className="w-[50px] h-[60px]"
-        />
+          style={{
+            maxWidth: "100%",
+            height: "auto"
+          }} />
         {/* // Animated Light Bar that'll stretch on hover */}
         <NeonLine />
         {/* Button  */}

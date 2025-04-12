@@ -21,7 +21,10 @@ const CaseStudies = () => {
             height={500}
             width={500}
             className="rounded-4xl relative top-2 md:top-0 border-4 border-white shadow-lg z-2"
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
 
           {/* Foreground Image */}
           <Image
@@ -30,7 +33,10 @@ const CaseStudies = () => {
             height={400}
             width={400}
             className="rounded-4xl absolute -top-[2px] -right-[2px]"
-          />
+            style={{
+              maxWidth: "100%",
+              height: "auto"
+            }} />
         </GridCol>
 
         <GridCol span={{ base: 12, md: 4 }}>

@@ -14,21 +14,30 @@ const OurWork = () => {
           height={500}
           width={500}
           className="max-w-[500px] h-20 rounded-md hidden md:block   "
-        />
+          style={{
+            maxWidth: "100%",
+            height: "auto"
+          }} />
         <Image
           src="/assets/image.png"
           alt="Dots"
           height={500}
           width={500}
           className="max-w-[500px] h-20 rounded-md hidden md:block   "
-        />
+          style={{
+            maxWidth: "100%",
+            height: "auto"
+          }} />
         <Image
           src="/assets/image.png"
           alt="Dots"
           height={500}
           width={500}
           className="max-w-[500px] h-20 rounded-md hidden md:block   "
-        />
+          style={{
+            maxWidth: "100%",
+            height: "auto"
+          }} />
       </div>
       {/* Centered Content  */}
       <div className="bg-white rounded-2xl flex flex-col justify-center items-center gap-2">
@@ -38,7 +47,10 @@ const OurWork = () => {
           height={500}
           width={500}
           className="w-3"
-        />
+          style={{
+            maxWidth: "100%",
+            height: "auto"
+          }} />
         <Title className="text-black text-3xl md:text-5xl text-center">
           Some of our works
         </Title>
@@ -69,21 +81,30 @@ const OurWork = () => {
           height={500}
           width={500}
           className="max-w-[500px] h-20 rounded-md hidden md:block   "
-        />
+          style={{
+            maxWidth: "100%",
+            height: "auto"
+          }} />
         <Image
           src="/assets/image.png"
           alt="Dots"
           height={500}
           width={500}
           className="max-w-[500px] h-20 rounded-md hidden md:block   "
-        />
+          style={{
+            maxWidth: "100%",
+            height: "auto"
+          }} />
         <Image
           src="/assets/image.png"
           alt="Dots"
           height={500}
           width={500}
           className="max-w-[500px] h-20 rounded-md hidden md:block   "
-        />
+          style={{
+            maxWidth: "100%",
+            height: "auto"
+          }} />
       </div>
     </div>
   );

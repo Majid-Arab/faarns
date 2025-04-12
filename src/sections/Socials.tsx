@@ -34,21 +34,30 @@ const Socials = () => {
               className="w-[30px] h-[30px] md:w-[40px] w- md:h-[40px]"
               width={500}
               height={500}
-            />
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />
             <Image
               src="/assets/instagram.svg"
               alt="Facebook"
               className="w-[30px] h-[30px] md:w-[40px] w- md:h-[40px]"
               width={500}
               height={500}
-            />
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />
             <Image
               src="/assets/linkedin.svg"
               alt="Facebook"
               className="w-[30px] h-[30px] md:w-[40px] w- md:h-[40px]"
               width={500}
               height={500}
-            />
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />
           </Group>
         </Box>
       </div>

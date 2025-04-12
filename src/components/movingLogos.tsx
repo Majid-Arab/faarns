@@ -114,7 +114,10 @@ export const InfiniteMovingLogos = ({
               alt={`Client logo ${index + 1}`}
               width={500}
               height={500}
-            />
+              style={{
+                maxWidth: "100%",
+                height: "auto"
+              }} />
           </div>
         ))}
       </div>
