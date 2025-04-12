@@ -1,8 +1,3 @@
-import {
-  IconBrandInstagram,
-  IconBrandTwitter,
-  IconBrandYoutube,
-} from "@tabler/icons-react";
 import { ActionIcon, Container, Group, Text } from "@mantine/core";
 import classes from "./Footer.module.css";
 import Image from "next/image";
