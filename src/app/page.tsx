@@ -1,4 +1,3 @@
-import { Header } from "@/components/header";
 import { Affiliate } from "@/sections/Affiliate";
 import CaseStudies from "@/sections/CaseStudies";
 import Contact from "@/sections/Contact";
@@ -13,7 +12,6 @@ import WhyUs from "@/sections/WhyUs";
 export default function Home() {
   return (
     <>
-      <Header />
       <Hero />
       <Contact />
       <Services />

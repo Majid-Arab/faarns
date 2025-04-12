@@ -7,6 +7,7 @@ import {
 import { Red_Hat_Display } from "next/font/google";
 import theme from "./theme";
 import "./globals.css";
+import { Header } from "@/components/header";
 
 const redHatDisplay = Red_Hat_Display({
   subsets: ["latin"],
@@ -30,6 +31,7 @@ export default function RootLayout({
         <ColorSchemeScript />
       </head>
       <body className={redHatDisplay.variable}>
+        <Header />
         <MantineProvider theme={theme}>{children}</MantineProvider>
       </body>
     </html>
