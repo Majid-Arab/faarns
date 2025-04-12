@@ -1,10 +1,16 @@
-import { Button } from '@mantine/core';
-import { IconBriefcase, IconBulbFilled, IconChartBar, IconDotsCircleHorizontal, IconFolderOpen } from '@tabler/icons-react';
-import React from 'react';
+import { Button } from "@mantine/core";
+import {
+  IconBriefcase,
+  IconBulbFilled,
+  IconChartBar,
+  IconDotsCircleHorizontal,
+  IconFolderOpen,
+} from "@tabler/icons-react";
+import React from "react";
 
 export function Header() {
   return (
-    <header className="flex items-center justify-around w-full fixed bottom-0 md:bottom-2 left-0 right-0 mx-auto py-1 px-0 md:px-2 text-white max-w-3xl rounded-lg border-2 border-purple-600 shadow-inner shadow-purple-300 z-30 bg-black">
+    <header className="flex items-center justify-around w-full fixed bottom-0 md:bottom-2 left-0 right-0 mx-auto py-1 px-0 md:px-2 text-white max-w-3xl rounded-lg border-2 border-b-0 border-purple-600 shadow-inner shadow-purple-300 z-30 bg-black">
       {/* Services Link */}
       <a href="#services" className="hover:text-purple-600 transition-colors">
         <IconBriefcase className="block md:hidden" size={20} />
@@ -12,7 +18,10 @@ export function Header() {
       </a>
 
       {/* Case Studies Link */}
-      <a href="#case-studies" className="hover:text-purple-600 transition-colors">
+      <a
+        href="#case-studies"
+        className="hover:text-purple-600 transition-colors"
+      >
         <IconChartBar className="block md:hidden" size={20} />
         <span className="hidden md:block font-medium">Case Studies</span>
       </a>
