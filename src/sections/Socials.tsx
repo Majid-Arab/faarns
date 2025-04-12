@@ -23,7 +23,7 @@ const Socials = () => {
             className="flex items-center capitalize text-center md:text-start text-4xl md:text-7xl h-full"
           >
             Contact&nbsp;
-            <ItalicText text="Us" size="70px" />
+            <ItalicText text="Us" size="text-4xl md:text-7xl" />
             <IconArrowUpRight size={45} className="text-purple-600" />
           </Button>
           <hr className="text-purple-600" />
