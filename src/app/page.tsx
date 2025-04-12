@@ -11,7 +11,7 @@ import WhyUs from "@/sections/WhyUs";
 
 export default function Home() {
   return (
-    <div className="pb-10">
+    <>
       {/* <Header /> */}
       <Hero />
       <Contact />
@@ -23,6 +23,6 @@ export default function Home() {
       <FAQ />
       <Socials />
       <Footer />
-    </div>
+    </>
   );
 }
