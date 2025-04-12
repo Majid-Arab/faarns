@@ -5,12 +5,7 @@ type Prop = {
 
 const ItalicText = ({ text, size = "40px" }: Prop) => {
   return (
-    <span
-      className="font-bold font-playfair italic md:text-[52px]"
-      style={{ fontSize: size }}
-    >
-      {text}
-    </span>
+    <span className={`font-bold font-playfair italic ${size}`}>{text}</span>
   );
 };
 
