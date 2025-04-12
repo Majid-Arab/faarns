@@ -64,8 +64,9 @@ const Footer = () => {
                 className="w-[25px] h-[25px] md:w-2 md:h-2"
                 style={{
                   maxWidth: "100%",
-                  height: "auto"
-                }} />
+                  height: "auto",
+                }}
+              />
               Faisal@Faarns.Com
             </div>
             <div className="flex items-center gap-1 text-lg">
@@ -77,8 +78,9 @@ const Footer = () => {
                 className="w-[25px] h-[25px] md:w-2 md:h-2"
                 style={{
                   maxWidth: "100%",
-                  height: "auto"
-                }} />
+                  height: "auto",
+                }}
+              />
               +932524635252
             </div>
           </div>
@@ -91,7 +93,7 @@ const Footer = () => {
         <Text size="sm">Privacy Policy</Text>
       </Container>
       <Container fluid>
-        <h1 className="text-7xl text-center sm:text-8xl md:text-[200px] lg:text-[300px] font-bold uppercase m-0 p-0">
+        <h1 className="text-7xl text-center text-dark-300 sm:text-8xl md:text-[200px] lg:text-[300px] font-bold uppercase m-0 p-0">
           Faarns
         </h1>
       </Container>
