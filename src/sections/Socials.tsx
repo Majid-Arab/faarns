@@ -1,4 +1,4 @@
-import ItalicText from "@/components/ItlaicText";
+import ItalicText from "@/components/ItalicText";
 import { Box, Button, Group, Text } from "@mantine/core";
 import { IconArrowRight, IconArrowUpRight } from "@tabler/icons-react";
 import Image from "next/image";

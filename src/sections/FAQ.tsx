@@ -1,5 +1,5 @@
 import { FaqSimple } from "@/components/FaqSimple";
-import ItalicText from "@/components/ItlaicText";
+import ItalicText from "@/components/ItalicText";
 import { Title } from "@mantine/core";
 import React from "react";
 
