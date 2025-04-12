@@ -1,6 +1,7 @@
 import CaseStudies from "@/sections/CaseStudies";
 import Contact from "@/sections/Contact";
 import FAQ from "@/sections/FAQ";
+import Footer from "@/sections/Footer";
 import Hero from "@/sections/Hero";
 import OurWork from "@/sections/ourWork";
 import Services from "@/sections/Services";
@@ -19,6 +20,7 @@ export default function Home() {
       <CaseStudies />
       <FAQ />
       <Socials />
+      <Footer />
     </div>
   );
 }
