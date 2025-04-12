@@ -1,0 +1,45 @@
+.form {
+  max-width: 500px;
+  width: 500px;
+  background: #ffffff26;
+  backdrop-filter: blur(25px);
+  border: 1px solid #ffffff26;
+  backdrop-filter: blur(15px);
+  padding: 50px 40px;
+  border-radius: var(--mantine-radius-lg);
+  box-shadow: var(--mantine-shadow-lg);
+  position: absolute;
+  top: 0;
+  right: 60px;
+
+  @media (max-width: 1200px) {
+    position: static;
+    top: 50px;
+    right: 0;
+  }
+
+  @media (max-width: 450px) {
+    right: 0;
+  }
+}
+
+.input {
+  background: #0202024d;
+  backdrop-filter: blur(30px);
+  border-color: var(--mantine-color-gray-4);
+  border-radius: var(--mantine-radius-md);
+  color: var(--mantine-color-white);
+  font-size: 18px;
+  padding: 20px 15px;
+
+  &::placeholder {
+    color: var(--mantine-color-gray-5);
+  }
+}
+
+.control {
+  background-color: var(--mantine-color-blue-6);
+  font-size: 18px;
+  margin-top: 100px;
+  background: #0b0b22;
+}

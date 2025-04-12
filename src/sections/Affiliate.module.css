@@ -1,0 +1,42 @@
+.wrapper {
+  min-height: 400px;
+  display: flex;
+  justify-content: center;
+  background-image: url("/assets/footerGradient.svg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: var(--mantine-radius-md);
+  padding: calc(var(--mantine-spacing-xl) * 2.5);
+
+  @media (max-width: 1200px) {
+    padding: 40px;
+  }
+  @media (max-width: 450px) {
+    padding: 20px;
+  }
+}
+
+.title {
+  font-family:
+    Greycliff CF,
+    var(--mantine-font-family);
+  color: var(--mantine-color-white);
+  line-height: 1;
+}
+
+.description {
+  color: var(--mantine-color-blue-0);
+  max-width: 300px;
+
+  @media (max-width: $mantine-breakpoint-sm) {
+    max-width: 100%;
+  }
+}
+
+.social {
+  color: var(--mantine-color-white);
+
+  @mixin hover {
+    color: var(--mantine-color-blue-1);
+  }
+}

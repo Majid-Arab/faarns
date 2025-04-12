@@ -1,3 +1,4 @@
+import { Affiliate } from "@/sections/Affiliate";
 import CaseStudies from "@/sections/CaseStudies";
 import Contact from "@/sections/Contact";
 import FAQ from "@/sections/FAQ";
@@ -18,6 +19,7 @@ export default function Home() {
       <OurWork />
       <WhyUs />
       <CaseStudies />
+      <Affiliate />
       <FAQ />
       <Socials />
       <Footer />
