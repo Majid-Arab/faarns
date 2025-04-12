@@ -12,8 +12,9 @@
   top: 0;
   right: 60px;
 
-  @media (max-width: 1200px) {
+  @media (max-width: 765px) {
     position: static;
+    padding: 50px 20px;
     top: 50px;
     right: 0;
   }
@@ -38,6 +39,11 @@
   &::placeholder {
     color: var(--mantine-color-gray-5);
   }
+
+  @media (max-width: 765px) {
+    font-size: 16px;
+    margin-top: 5px;
+  }
 }
 
 .control {
@@ -45,4 +51,9 @@
   font-size: 18px;
   margin-top: 100px;
   background: #0b0b22;
+
+  @media (max-width: 765px) {
+    font-size: 16px;
+    margin-top: 20px;
+  }
 }

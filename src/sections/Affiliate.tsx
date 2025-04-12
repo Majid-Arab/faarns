@@ -19,13 +19,13 @@ export function Affiliate() {
             Becom an&nbsp;
             <ItalicText text="Affiliate" /> Partner
           </Title>
-          <div className="flex flex-col gap-1 justify-center md:justify-start">
-            <Text className="max-w-[350px] md:max-w-[500px] text-[16px] md:text-[20px]">
+          <div className="flex flex-col gap-1">
+            <Text className="max-w-[350px] md:max-w-[500px] text-[16px] md:text-[20px] text-center md:text-start">
               Join our network of successful partners and earn competitive
               commissions
             </Text>
 
-            <Group className="flex justify-center">
+            <Group className="flex justify-center md:justify-start">
               <AvatarGroup spacing="sm">
                 <Avatar
                   src={avatars[0]}
@@ -66,8 +66,9 @@ export function Affiliate() {
                 maxWidth: "100%",
                 height: "auto",
                 objectFit: "cover",
-                objectPosition: "center"
-              }} />
+                objectPosition: "center",
+              }}
+            />
           </div>
         </div>
       </div>
