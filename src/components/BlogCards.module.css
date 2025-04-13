@@ -1,4 +1,5 @@
 .card {
+  background: none;
   transition:
     transform 150ms ease,
     box-shadow 150ms ease;
@@ -11,5 +12,5 @@
 
 .title {
   font-family: "Greycliff CF", var(--mantine-font-family);
-  font-weight: bold;
+  font-size: 30px;
 }
