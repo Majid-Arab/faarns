@@ -93,7 +93,7 @@ const Footer = () => {
         <Text size="sm">Privacy Policy</Text>
       </Container>
       <Container fluid>
-        <h1 className="text-7xl text-center text-dark-300 sm:text-8xl md:text-[200px] lg:text-[300px] font-bold uppercase m-0 p-0">
+        <h1 className="text-7xl text-center text-dark-300 sm:text-8xl md:text-[200px] lg:text-[250px] xl:text-[300px] font-bold uppercase m-0 p-0">
           Faarns
         </h1>
       </Container>
