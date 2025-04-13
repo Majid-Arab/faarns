@@ -43,9 +43,7 @@ const Hero = () => {
           placeholder="Search any Blog"
           classNames={{ input: classes.input, wrapper: classes.wrapper }}
           rightSectionWidth={40}
-          rightSection={
-            <IconSearch size={22} stroke={3} className={classes.searchIcon} />
-          }
+          rightSection={<IconSearch size={22} className={classes.searchIcon} />}
           radius="xl"
         />
       </Box>
