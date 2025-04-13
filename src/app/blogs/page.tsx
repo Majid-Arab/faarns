@@ -12,7 +12,7 @@ import { BlogCards } from "@/components/BlogCards";
 const Hero = () => {
   return (
     <>
-      <Box className="relative flex flex-col items-center justify-start h-36 bg-[url(/assets/blog-bg.png)] bg-contain bg-center bg-no-repeat ">
+      <Box className="relative flex flex-col items-center justify-start h-20 md:h-36 bg-[url(/assets/blog-bg.png)] bg-cover md:bg-contain bg-center bg-no-repeat inset-shadow-sm inset-shadow-white ">
         <Box className="flex flex-col items-center justify-start gap-1 md:gap-4 w-full mt-2 z-2">
           <Image
             src="/assets/logo.png"
@@ -33,7 +33,7 @@ const Hero = () => {
             ]}
           />
           <div className="text-center ">
-            <Title className="text-center md:text-start text-2xl md:text-6xl ">
+            <Title className="text-center md:text-start text-3xl md:text-6xl ">
               The FAARNS&nbsp;
               <ItalicText text="Insight" />:
             </Title>
@@ -52,7 +52,7 @@ const Hero = () => {
             radius="xl"
           />
         </Box>
-        <Box className="flex w-full absolute h-full items-center justify-between z-1">
+        <Box className="md:flex w-full hidden md:absolute h-full items-center justify-between z-1">
           <Image
             src="/assets/blog-grids.png"
             alt="blogGrids"

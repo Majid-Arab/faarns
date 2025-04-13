@@ -13,4 +13,8 @@
 .title {
   font-family: "Greycliff CF", var(--mantine-font-family);
   font-size: 30px;
+
+  @media (max-width: 765px) {
+    font-size: 24px;
+  }
 }
