@@ -8,6 +8,7 @@ import { Red_Hat_Display } from "next/font/google";
 import theme from "./theme";
 import "./globals.css";
 import { Header } from "@/components/header";
+import Footer from "@/sections/Footer";
 
 const redHatDisplay = Red_Hat_Display({
   subsets: ["latin"],
@@ -34,6 +35,7 @@ export default function RootLayout({
         <MantineProvider theme={theme}>
           <Header />
           {children}
+          <Footer />
         </MantineProvider>
       </body>
     </html>
