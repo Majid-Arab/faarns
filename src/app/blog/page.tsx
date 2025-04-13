@@ -43,19 +43,25 @@ const Hero = () => {
               <Text className="text-md md:text-[18px] mb-[5px] md:mb-2">
                 Author
               </Text>
-              <Title className="text-xl font-normal">Author Name</Title>
+              <Title className="text-xl md:text-4xl font-normal md:font-semibold">
+                Author Name
+              </Title>
             </Box>
             <Box className="text-center">
               <Text className="text-md md:text-[18px] mb-[5px] md:mb-2">
                 Publish Date
               </Text>
-              <Title className="text-xl font-normal">Mar 20,2025</Title>
+              <Title className="text-xl md:text-4xl font-normal md:font-semibold">
+                Mar 20,2025
+              </Title>
             </Box>
             <Box className="text-center">
               <Text className="text-md md:text-[18px] mb-[5px] md:mb-2">
                 Category
               </Text>
-              <Title className="text-xl font-normal">AI / Humanoid</Title>
+              <Title className="text-xl md:text-4xl font-normal md:font-semibold">
+                AI / Humanoid
+              </Title>
             </Box>
           </Group>
         </Box>
