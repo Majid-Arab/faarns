@@ -9,6 +9,7 @@ import theme from "./theme";
 import "./globals.css";
 import { Header } from "@/components/header";
 import Footer from "@/sections/Footer";
+import BacktoTop from "@/components/BacktoTop";
 
 const redHatDisplay = Red_Hat_Display({
   subsets: ["latin"],
@@ -35,6 +36,7 @@ export default function RootLayout({
         <MantineProvider theme={theme}>
           <Header />
           {children}
+          <BacktoTop />
           <Footer />
         </MantineProvider>
       </body>
