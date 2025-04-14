@@ -1,4 +1,4 @@
-import { LeadGrid } from "@/components/LeadGrid";
+import { LeadGrid } from "@/components/why-us/LeadGrid";
 import ItalicText from "@/components/ui/ItalicText";
 import { Title } from "@mantine/core";
 import React from "react";
