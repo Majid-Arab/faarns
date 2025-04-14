@@ -2,7 +2,7 @@ import { Affiliate } from "@/components/affiliate/Affiliate";
 import CaseStudies from "@/components/case-studies/CaseStudies";
 import Contact from "@/components/contact/Contact";
 import FAQ from "@/components/faq/FAQ";
-import Hero from "@/sections/Hero";
+import Hero from "@/components/main/Hero";
 import OurWork from "@/sections/ourWork";
 import Services from "@/sections/Services";
 import Socials from "@/sections/Socials";
