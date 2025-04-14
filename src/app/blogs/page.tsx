@@ -1,11 +1,11 @@
-import Breadcrumb from "@/components/Breadcrumb";
-import ItalicText from "@/components/ItalicText";
+import Breadcrumb from "@/components/ui/Breadcrumb";
+import ItalicText from "@/components/ui/ItalicText";
 import { Box, Group, Text, TextInput, Title } from "@mantine/core";
 import { IconSearch } from "@tabler/icons-react";
 import Image from "next/image";
 import classes from "./blog.module.css";
 import React from "react";
-import Badges from "@/components/Badges";
+import Badges from "@/components/ui/Badges";
 import { BlogCards } from "@/components/BlogCards";
 
 const Hero = () => {

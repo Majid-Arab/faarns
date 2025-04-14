@@ -1,4 +1,4 @@
-import Breadcrumb from "@/components/Breadcrumb";
+import Breadcrumb from "@/components/ui/Breadcrumb";
 import { Box, Grid, GridCol, Text, Title } from "@mantine/core";
 import Image from "next/image";
 import React from "react";

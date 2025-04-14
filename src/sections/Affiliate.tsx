@@ -1,6 +1,6 @@
 import { Avatar, AvatarGroup, Group, Text, Title } from "@mantine/core";
 import classes from "./Affiliate.module.css";
-import ItalicText from "@/components/ItalicText";
+import ItalicText from "@/components/ui/ItalicText";
 import Image from "next/image";
 import Form from "@/components/Form";
 

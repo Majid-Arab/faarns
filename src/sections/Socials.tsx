@@ -1,4 +1,4 @@
-import ItalicText from "@/components/ItalicText";
+import ItalicText from "@/components/ui/ItalicText";
 import { Box, Button, Group, Text } from "@mantine/core";
 import { IconArrowRight, IconArrowUpRight } from "@tabler/icons-react";
 import Image from "next/image";
@@ -36,8 +36,9 @@ const Socials = () => {
               height={500}
               style={{
                 maxWidth: "100%",
-                height: "auto"
-              }} />
+                height: "auto",
+              }}
+            />
             <Image
               src="/assets/instagram.svg"
               alt="Facebook"
@@ -46,8 +47,9 @@ const Socials = () => {
               height={500}
               style={{
                 maxWidth: "100%",
-                height: "auto"
-              }} />
+                height: "auto",
+              }}
+            />
             <Image
               src="/assets/linkedin.svg"
               alt="Facebook"
@@ -56,8 +58,9 @@ const Socials = () => {
               height={500}
               style={{
                 maxWidth: "100%",
-                height: "auto"
-              }} />
+                height: "auto",
+              }}
+            />
           </Group>
         </Box>
       </div>

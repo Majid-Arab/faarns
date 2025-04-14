@@ -10,7 +10,7 @@ import {
 } from "@mantine/core";
 import classes from "./BlogCards.module.css";
 import { useRouter } from "next/navigation";
-import PaginationBar from "./Pagination";
+import PaginationBar from "./ui/Pagination";
 
 const mockdata = [
   {
