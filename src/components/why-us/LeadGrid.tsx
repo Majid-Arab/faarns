@@ -7,7 +7,7 @@ import {
   Text,
   Title,
 } from "@mantine/core";
-import { GridCard } from "../GridCard";
+import { GridCard } from "./GridCard";
 import { IconColorSwatch } from "@tabler/icons-react";
 
 export function LeadGrid() {
