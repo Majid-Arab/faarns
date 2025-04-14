@@ -1,4 +1,4 @@
-import { FaqSimple } from "@/components/FaqSimple";
+import { FaqSimple } from "@/components/faq/FaqSimple";
 import ItalicText from "@/components/ui/ItalicText";
 import { Title } from "@mantine/core";
 import React from "react";
