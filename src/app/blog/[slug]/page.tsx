@@ -5,12 +5,6 @@ import React from "react";
 import Blog from "@/components/blogs/Blog";
 import { notFound } from "next/navigation";
 
-type Props = {
-  params: {
-    slug: keyof typeof blogData;
-  };
-};
-
 const blogData = {
   "top-10": {
     readTime: "22",
@@ -58,7 +52,13 @@ const blogData = {
   },
 } as const;
 
-const BlogPage = ({ params }: Props) => {
+type PageProps = {
+  params: {
+    slug: keyof typeof blogData;
+  };
+};
+
+const BlogPage = ({ params }: PageProps) => {
   const blog = blogData[params.slug];
 
   if (!blog) return notFound();
