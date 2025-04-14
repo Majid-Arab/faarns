@@ -1,5 +1,5 @@
-import { Affiliate } from "@/sections/Affiliate";
-import CaseStudies from "@/sections/CaseStudies";
+import { Affiliate } from "@/components/affiliate/Affiliate";
+import CaseStudies from "@/components/case-studies/CaseStudies";
 import Contact from "@/sections/Contact";
 import FAQ from "@/sections/FAQ";
 import Hero from "@/sections/Hero";

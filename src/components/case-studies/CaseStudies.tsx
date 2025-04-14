@@ -1,4 +1,4 @@
-import { CaseStudyCard } from "@/components/CaseStudyCard";
+import { CaseStudyCard } from "@/components/case-studies/CaseStudyCard";
 import { Title, Grid, GridCol } from "@mantine/core";
 import Image from "next/image";
 import React from "react";
@@ -23,8 +23,9 @@ const CaseStudies = () => {
             className="rounded-4xl relative top-2 md:top-0 border-4 border-white shadow-lg z-2"
             style={{
               maxWidth: "100%",
-              height: "auto"
-            }} />
+              height: "auto",
+            }}
+          />
 
           {/* Foreground Image */}
           <Image
@@ -35,8 +36,9 @@ const CaseStudies = () => {
             className="rounded-4xl absolute -top-[2px] -right-[2px]"
             style={{
               maxWidth: "100%",
-              height: "auto"
-            }} />
+              height: "auto",
+            }}
+          />
         </GridCol>
 
         <GridCol span={{ base: 12, md: 4 }}>
