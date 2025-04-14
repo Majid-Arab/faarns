@@ -7,7 +7,7 @@ import {
 import { Red_Hat_Display } from "next/font/google";
 import theme from "./theme";
 import "./globals.css";
-import { Header } from "@/components/header";
+import { Header } from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
 import BacktoTop from "@/components/BacktoTop";
 
