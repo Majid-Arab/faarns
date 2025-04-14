@@ -1,7 +1,7 @@
-import ImageGallery from "@/components/contactCards";
-import ClientLogos from "@/components/movingLogos";
 import { Box, Button, Group, Text } from "@mantine/core";
 import React from "react";
+import ImageGallery from "./contactCards";
+import ClientLogos from "./movingLogos";
 
 const Contact = () => {
   return (

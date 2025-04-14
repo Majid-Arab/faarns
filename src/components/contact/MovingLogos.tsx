@@ -1,8 +1,8 @@
 "use client";
 
 import React, { useEffect, useState, useRef } from "react";
-import { cn } from "../../lib/utils";
 import Image from "next/image";
+import { cn } from "../../../lib/utils";
 
 export default function ClientLogos() {
   return (
@@ -108,7 +108,10 @@ export const InfiniteMovingLogos = ({
         )}
       >
         {logoImages.map((src, index) => (
-          <div key={index} className="flex items-center justify-center max-w-[100px]">
+          <div
+            key={index}
+            className="flex items-center justify-center max-w-[100px]"
+          >
             <Image
               src={src}
               alt={`Client logo ${index + 1}`}
@@ -116,8 +119,9 @@ export const InfiniteMovingLogos = ({
               height={500}
               style={{
                 maxWidth: "100%",
-                height: "auto"
-              }} />
+                height: "auto",
+              }}
+            />
           </div>
         ))}
       </div>
