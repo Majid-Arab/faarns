@@ -9,7 +9,7 @@ import theme from "./theme";
 import "./globals.css";
 import { Header } from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
-import BacktoTop from "@/components/BacktoTop";
+import BacktoTop from "@/components/ui/BacktoTop";
 
 const redHatDisplay = Red_Hat_Display({
   subsets: ["latin"],
