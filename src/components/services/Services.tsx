@@ -1,4 +1,4 @@
-import { ServiceCard } from "@/components/serviceCard";
+import { ServiceCard } from "@/components/services/ServiceCard";
 import { Button, Title } from "@mantine/core";
 import React from "react";
 

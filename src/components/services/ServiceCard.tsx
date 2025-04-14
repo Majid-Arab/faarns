@@ -1,5 +1,5 @@
 import { Box, Card, Text } from "@mantine/core";
-import classes from "./serviceCard.module.css";
+import classes from "./ServiceCard.module.css";
 
 const mockdata = [
   {
