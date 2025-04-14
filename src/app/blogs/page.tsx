@@ -1,6 +1,6 @@
 import Breadcrumb from "@/components/Breadcrumb";
 import ItalicText from "@/components/ItalicText";
-import { Box, Group, Pagination, Text, TextInput, Title } from "@mantine/core";
+import { Box, Group, Text, TextInput, Title } from "@mantine/core";
 import { IconSearch } from "@tabler/icons-react";
 import Image from "next/image";
 import classes from "./blog.module.css";

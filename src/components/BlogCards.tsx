@@ -5,7 +5,6 @@ import {
   Card,
   Container,
   Image,
-  Pagination,
   SimpleGrid,
   Text,
 } from "@mantine/core";

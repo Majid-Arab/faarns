@@ -1,5 +1,5 @@
 import Breadcrumb from "@/components/Breadcrumb";
-import { Box, Grid, GridCol, Group, Text, Title } from "@mantine/core";
+import { Box, Grid, GridCol, Text, Title } from "@mantine/core";
 import Image from "next/image";
 import React from "react";
 import Blog from "@/components/Blog";
