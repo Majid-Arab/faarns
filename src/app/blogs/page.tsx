@@ -6,7 +6,7 @@ import Image from "next/image";
 import classes from "./blog.module.css";
 import React from "react";
 import Badges from "@/components/ui/Badges";
-import { BlogCards } from "@/components/BlogCards";
+import { BlogCards } from "@/components/blogs/BlogCards";
 
 const Hero = () => {
   return (
