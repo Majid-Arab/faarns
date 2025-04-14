@@ -1,10 +1,9 @@
 import Breadcrumb from "@/components/Breadcrumb";
 import ItalicText from "@/components/ItalicText";
-import { Box, Group, Text, TextInput, Title } from "@mantine/core";
+import { Box, Group, Pagination, Text, TextInput, Title } from "@mantine/core";
 import { IconSearch } from "@tabler/icons-react";
 import Image from "next/image";
 import classes from "./blog.module.css";
-
 import React from "react";
 import Badges from "@/components/Badges";
 import { BlogCards } from "@/components/BlogCards";
@@ -76,7 +75,7 @@ const Hero = () => {
         </Box>
       </Box>
       <div className="flex justify-center">
-        <div className="w-[1400px] mt-2 relative">
+        <div className="w-[1400px] mx-auto my-2 relative">
           <Group gap={20} justify="center">
             <Badges text="Latest Blogs" />
             <Badges text="Latest Blogs" />
