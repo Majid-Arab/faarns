@@ -5,7 +5,9 @@ import React from "react";
 import Blog from "@/components/blogs/Blog";
 import { notFound } from "next/navigation";
 import { blogData } from "../../../../type/data";
-import { BlogPost, BlogSlug } from "../../../../type/type";
+import { BlogPost } from "../../../../type/type";
+
+export type BlogSlug = keyof typeof blogData;
 
 type BlogSlugProp = {
   params: {
