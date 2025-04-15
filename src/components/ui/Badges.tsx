@@ -1,11 +1,8 @@
 import { Badge } from "@mantine/core";
 import React from "react";
+import { BadgeProp } from "../../../type/type";
 
-type Prop = {
-  text: string;
-};
-
-const Badges = ({ text }: Prop) => {
+const Badges = ({ text }: BadgeProp) => {
   return (
     <Badge
       variant="outline"

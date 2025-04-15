@@ -1,12 +1,7 @@
 import { Paper, Text } from "@mantine/core";
+import { GridCardProp } from "../../../type/type";
 
-type Prop = {
-  icon: React.ElementType;
-  title: string;
-  description: string;
-};
-
-export function GridCard({ icon: Icon, title, description }: Prop) {
+export function GridCard({ icon: Icon, title, description }: GridCardProp) {
   return (
     <Paper
       withBorder

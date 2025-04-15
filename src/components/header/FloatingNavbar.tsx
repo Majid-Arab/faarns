@@ -5,17 +5,7 @@ import Link from "next/link";
 import { cn } from "../../../lib/utils";
 import { Button } from "@mantine/core";
 import { IconPhoto } from "@tabler/icons-react";
-
-type NavItem = {
-  link: string;
-  icon?: React.ReactNode;
-  name: string;
-};
-
-type FloatingNavProps = {
-  navItems: NavItem[];
-  className?: string;
-};
+import { FloatingNavProps } from "../../../type/type";
 
 export const FloatingNav = ({ navItems, className }: FloatingNavProps) => {
   const [visible] = useState(true);

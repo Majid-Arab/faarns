@@ -1,14 +1,5 @@
 import { Breadcrumbs, Anchor } from "@mantine/core";
-
-type BreadcrumbItem = {
-  title: string;
-  href: string;
-};
-
-type BreadcrumbProps = {
-  items: BreadcrumbItem[];
-  separator?: React.ReactNode;
-};
+import { BreadcrumbProps } from "../../../type/type";
 
 const Breadcrumb = ({ items, separator = ">" }: BreadcrumbProps) => {
   const links = items.map((item, index) => (

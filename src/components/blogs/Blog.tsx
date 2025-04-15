@@ -8,15 +8,9 @@ import {
   Text,
 } from "@mantine/core";
 import Image from "next/image";
+import { BlogsProp } from "../../../type/type";
 
-type Prop = {
-  readTime: string;
-  image: string;
-  intro: string;
-  content: string;
-};
-
-const Blog = ({ readTime, image, intro, content }: Prop) => {
+const Blog = ({ readTime, image, intro, content }: BlogsProp) => {
   return (
     <Container fluid className="text-black mb-4">
       <Box className="w-full h-full md:h-full -mt-26 md:-mt-18">
