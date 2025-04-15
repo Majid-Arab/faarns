@@ -7,7 +7,7 @@ import { notFound } from "next/navigation";
 import { blogData } from "../../../../type/data";
 import { BlogSlugProp } from "../../../../type/type";
 
-const BlogPage = ({ params }: BlogSlugProp) => {
+const BlogPage = async ({ params }: BlogSlugProp) => {
   const blog = blogData[params.slug];
 
   if (!blog) return notFound();

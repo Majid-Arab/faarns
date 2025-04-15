@@ -1,4 +1,6 @@
-export const blogData = {
+import { BlogSlug, BlogPost } from "./type";
+
+export const blogData: Record<BlogSlug, BlogPost> = {
   "top-10": {
     readTime: "22",
     title: "Top 10 places to visit in Norway this summer",
@@ -44,5 +46,3 @@ export const blogData = {
       "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam labore quod ipsum! Repudiandae, dignissimos et! Ipsum, tempore natus. Necessitatibus nobis id quae nesciunt, cumque quidem nam suscipit voluptate nihil perspiciatis totam quod?",
   },
 } as const;
-
-export type BlogSlug = keyof typeof blogData;

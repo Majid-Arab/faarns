@@ -1,5 +1,3 @@
-import type { BlogSlug } from "./data";
-
 // Header
 
 export type NavItem = {
@@ -14,11 +12,21 @@ export type FloatingNavProps = {
 };
 
 // Blogs
-export type BlogsProp = {
-  readTime: string;
-  image: string;
+export type BlogSlug =
+  | "top-10"
+  | "best-forests"
+  | "hawaii-beaches"
+  | "mountains-at-night";
+
+export type BlogPost = {
+  title: string;
   intro: string;
-  content: string;
+  image: string;
+  author: string;
+  date: string;
+  category: string;
+  description: string;
+  readTime: string;
 };
 
 export type BlogSlugProp = {
