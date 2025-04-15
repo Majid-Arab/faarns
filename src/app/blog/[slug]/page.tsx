@@ -5,7 +5,13 @@ import React from "react";
 import Blog from "@/components/blogs/Blog";
 import { notFound } from "next/navigation";
 import { blogData } from "../../../../type/data";
-import { BlogPost, BlogSlugProp } from "../../../../type/type";
+import { BlogPost, BlogSlug } from "../../../../type/type";
+
+type BlogSlugProp = {
+  params: {
+    slug: BlogSlug;
+  };
+};
 
 const BlogPage = async ({ params }: BlogSlugProp) => {
   const blog: BlogPost | undefined = blogData[params.slug];
