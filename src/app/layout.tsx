@@ -10,6 +10,7 @@ import "./globals.css";
 import { Header } from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
 import BacktoTop from "@/components/ui/BacktoTop";
+import "@mantine/carousel/styles.css";
 
 const redHatDisplay = Red_Hat_Display({
   subsets: ["latin"],

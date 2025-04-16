@@ -7,6 +7,7 @@ import OurWork from "@/components/our-work/OurWork";
 import Services from "@/components/services/Services";
 import Socials from "@/components/contact/Socials";
 import WhyUs from "@/components/why-us/WhyUs";
+import { Testimonials } from "@/components/testimonials/Testimonials";
 
 export default function Home() {
   return (
@@ -17,6 +18,7 @@ export default function Home() {
       <OurWork />
       <WhyUs />
       <CaseStudies />
+      <Testimonials />
       <Affiliate />
       <FAQ />
       <Socials />
