@@ -7,16 +7,13 @@ import { notFound } from "next/navigation";
 import { blogData } from "../../../../type/data";
 import { BlogPost } from "../../../../type/type";
 
-export type BlogSlug = keyof typeof blogData;
-
 type BlogSlugProp = {
-  params: {
-    slug: BlogSlug;
-  };
+  params: Promise<{ slug: string }>;
 };
 
 const BlogPage = async ({ params }: BlogSlugProp) => {
-  const blog: BlogPost | undefined = blogData[params.slug];
+  const { slug } = await params;
+  const blog: BlogPost | undefined = blogData[slug];
 
   if (!blog) return notFound();
 
