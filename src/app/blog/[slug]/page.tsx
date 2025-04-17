@@ -11,7 +11,7 @@ type BlogSlugProp = {
   params: Promise<{ slug: string }>;
 };
 
-const BlogPage = async ({ params }: BlogSlugProp) => {
+export default async function BlogPage({ params }: BlogSlugProp) {
   const { slug } = await params;
   const blog: BlogPost | undefined = blogData[slug];
 
@@ -90,6 +90,4 @@ const BlogPage = async ({ params }: BlogSlugProp) => {
       </div>
     </div>
   );
-};
-
-export default BlogPage;
+}
