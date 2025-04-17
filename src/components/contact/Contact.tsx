@@ -1,7 +1,7 @@
 import { Box, Button, Group, Text } from "@mantine/core";
 import React from "react";
 import ImageGallery from "./ContactCards";
-import ClientLogos from "./MovingLogos";
+import { InfiniteMovingLogos } from "./MovingLogos";
 
 const Contact = () => {
   return (
@@ -59,5 +59,13 @@ const Contact = () => {
     </div>
   );
 };
+
+export function ClientLogos() {
+  return (
+    <div className="rounded-md flex flex-col antialiased items-center justify-center relative overflow-hidden">
+      <InfiniteMovingLogos direction="right" speed="slow" />
+    </div>
+  );
+}
 
 export default Contact;
