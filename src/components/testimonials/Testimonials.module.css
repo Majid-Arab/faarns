@@ -1,20 +1,22 @@
 .card {
   height: 440px;
   display: flex;
-  .indicator {
-    width: 12px;
-    height: 4px;
-    transition: width 250ms ease;
-
-    &[data-active] {
-      width: 40px;
-    }
-  }
-  flex-direction: column;
   justify-content: space-between;
   align-items: flex-start;
+  background-color: #fff;
+  color: #000;
   background-size: cover;
   background-position: center;
+}
+
+.inner {
+  display: flex;
+  gap: 30px;
+  height: 100%;
+}
+
+.imgBox {
+  height: auto;
 }
 
 .title {
@@ -33,4 +35,27 @@
   opacity: 0.7;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.controls {
+  margin-left: -30px;
+  margin-right: -30px;
+  background: none;
+}
+
+.control {
+  border: 2px solid #000;
+  color: #54518b;
+  background-color: #fff;
+  padding: 3px;
+}
+
+.indicator {
+  width: 12px;
+  height: 4px;
+  transition: width 250ms ease;
+
+  &[data-active] {
+    width: 40px;
+  }
 }
