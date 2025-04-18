@@ -1,96 +1,144 @@
 "use client";
 
 import { Carousel } from "@mantine/carousel";
-import { Button, Paper, Text, Title, useMantineTheme } from "@mantine/core";
-import { useMediaQuery } from "@mantine/hooks";
+import { Paper, Text, Title } from "@mantine/core";
 import classes from "./Testimonials.module.css";
+import ItalicText from "../ui/ItalicText";
+import Image from "next/image";
+import {
+  IconArrowLeft,
+  IconArrowRight,
+  IconQuoteFilled,
+} from "@tabler/icons-react";
 
 interface CardProps {
   image: string;
-  title: string;
-  category: string;
+  name: string;
+  company: string;
+  logo: string;
+  testimonial: string;
 }
 
-function Card({ image, title, category }: CardProps) {
+function Card({ image, name, testimonial, company, logo }: CardProps) {
   return (
-    <Paper
-      shadow="md"
-      p="xl"
-      radius="md"
-      style={{ backgroundImage: `url(${image})` }}
-      className={classes.card}
-    >
-      <div>
-        <Text className={classes.category} size="xs">
-          {category}
-        </Text>
-        <Title order={3} className={classes.title}>
-          {title}
-        </Title>
+    <Paper shadow="md" p="xl" radius="md" className={classes.card}>
+      <div className={classes.inner}>
+        <div
+          className={classes.imgBox}
+          style={{ backgroundImage: `${image}` }}
+        />
+        <div className={classes.testimonial}>
+          <Text className={classes.icon} size="xs">
+            <IconQuoteFilled size={35} />
+          </Text>
+          <Text className={classes.message} size="lg">
+            {testimonial}
+          </Text>
+          <div className={classes.company}>
+            <div className="">
+              <Title order={3} className={classes.name} mb={2}>
+                {name}
+              </Title>
+              <Title order={4} className={classes.company}>
+                {company}
+              </Title>
+            </div>
+            <Image
+              src={logo}
+              alt="Background Gradient"
+              width={500}
+              height={500}
+              className="object-contain rounded- w-6 h-fit bg-black"
+            />
+          </div>
+        </div>
       </div>
-      <Button variant="white" color="dark">
-        Read article
-      </Button>
     </Paper>
   );
 }
 
 const data = [
   {
-    image:
-      "https://images.unsplash.com/photo-1508193638397-1c4234db14d8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
-    title: "Best forests to visit in North America",
-    category: "nature",
+    image: "/assets/blog.png",
+    testimonial: "Best forests to visit in North America",
+    name: "Jhon Doe",
+    company: "Company name",
+    logo: "/assets/client.png",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1559494007-9f5847c49d94?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
-    title: "Hawaii beaches review: better than you think",
-    category: "beach",
+    image: "/assets/affiliate.png",
+    testimonial: "Hawaii beaches review: better than you think",
+    name: "beach1",
+    company: "Company name",
+    logo: "/assets/client.png",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1608481337062-4093bf3ed404?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
-    title: "Mountains at night: 12 best locations to enjoy the view",
-    category: "nature",
+    image: "/assets/affiliate.png",
+    testimonial: "Mountains at night: 12 best locations to enjoy the view",
+    name: "Jhon Doe2",
+    company: "Company name",
+    logo: "/assets/client.png",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1507272931001-fc06c17e4f43?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
-    title: "Aurora in Norway: when to visit for best experience",
-    category: "nature",
+    image: "/assets/affiliate.png",
+    testimonial: "Aurora in Norway: when to visit for best experience",
+    name: "Jhon Doe3",
+    company: "Company name",
+    logo: "/assets/client.png",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1510798831971-661eb04b3739?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
-    title: "Best places to visit this winter",
-    category: "tourism",
+    image: "/assets/affiliate.png",
+    testimonial: "Best places to visit this winter",
+    name: "tourism",
+    company: "Company name",
+    logo: "/assets/client.png",
   },
   {
-    image:
-      "https://images.unsplash.com/photo-1582721478779-0ae163c05a60?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=400&q=80",
-    title: "Active volcanos reviews: travel at your own risk",
-    category: "nature",
+    image: "/assets/affiliate.png",
+    testimonial: "Active volcanos reviews: travel at your own risk",
+    name: "Jhon Doe4",
+    company: "Company name",
+    logo: "/assets/client.png",
   },
 ];
 
 export function Testimonials() {
-  const theme = useMantineTheme();
-  const mobile = useMediaQuery(`(max-width: ${theme.breakpoints.sm})`);
   const slides = data.map((item) => (
-    <Carousel.Slide key={item.title}>
+    <Carousel.Slide key={item.name}>
       <Card {...item} />
     </Carousel.Slide>
   ));
 
   return (
-    <Carousel
-      slideSize={{ base: "100%", sm: "50%" }}
-      slideGap={{ base: 2, sm: "xl" }}
-      align="start"
-      slidesToScroll={mobile ? 1 : 2}
-    >
-      {slides}
-    </Carousel>
+    <div className="h-screen ">
+      <div className="relative">
+        <Image
+          src="/assets/footerGradient.svg"
+          alt="Background Gradient"
+          width={500}
+          height={500}
+          className="absolute -z-1 object-center"
+        />
+        <Text className="m-auto max-w-[250px] md:max-w-[280px] text text-xl md:text-[25px] text-center">
+          Don&apos;t take <ItalicText text="our" /> Word for it
+        </Text>
+        <Title className="capitalize text-3xl md:text-5xl text-center">
+          See what our <ItalicText text="Clients" /> say!
+        </Title>
+        <Carousel
+          withIndicators
+          slideSize={"100%"}
+          slideGap={{ base: 4, sm: 0 }}
+          nextControlIcon={<IconArrowRight />}
+          previousControlIcon={<IconArrowLeft />}
+          align="start"
+          classNames={classes}
+          style={{ maxWidth: "1000px", margin: "auto" }}
+          loop
+        >
+          {slides}
+        </Carousel>
+      </div>
+    </div>
   );
 }
