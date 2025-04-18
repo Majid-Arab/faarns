@@ -12,12 +12,6 @@ export type FloatingNavProps = {
 };
 
 // Blogs
-export type BlogSlug =
-  | "top-10"
-  | "best-forests"
-  | "hawaii-beaches"
-  | "mountains-at-night";
-
 export type BlogProps = {
   readTime: string;
   image: string;
@@ -26,6 +20,8 @@ export type BlogProps = {
 };
 
 export type BlogPost = {
+  id: string;
+  slug: string;
   title: string;
   author: string;
   date: string;
@@ -37,9 +33,9 @@ export type BlogPost = {
 };
 
 export type BlogSlugProp = {
-  params: {
-    slug: BlogSlug;
-  };
+  title: string;
+  image: string;
+  slug: string;
 };
 
 // UI Components

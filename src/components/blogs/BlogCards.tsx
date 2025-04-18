@@ -13,11 +13,11 @@ import classes from "./BlogCards.module.css";
 import { useRouter } from "next/navigation";
 import PaginationBar from "../ui/Pagination";
 import { useEffect, useState } from "react";
-import { BlogSlugProp } from "../../../type/type";
+import { BlogPost } from "../../../type/type";
 
 export function BlogCards() {
   const router = useRouter();
-  const [posts, setPosts] = useState<BlogSlugProp[]>([]);
+  const [posts, setPosts] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
@@ -41,8 +41,21 @@ export function BlogCards() {
     fetchPosts();
   }, []);
 
-  const handleClick = (slug: string) => {
-    router.push(`/blog/${slug}`);
+  const handleClick = async (slug: string) => {
+    // router.push(`/blogs/random`);
+    try {
+      const response = await fetch("https://jsonfakery.com/blogs/random");
+      if (!response.ok) {
+        throw new Error("Failed to fetch blog posts");
+      }
+      const data = await response.json();
+      console.log("data", data);
+      setPosts(data);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Unknown error");
+    } finally {
+      setLoading(false);
+    }
   };
 
   if (loading) {
@@ -67,10 +80,10 @@ export function BlogCards() {
 
   const cards = posts.map((article) => (
     <Card
-      key={article.slug.}
+      key={article.title}
       p="md"
       component="a"
-      onClick={() => handleClick(article.slug.title)}
+      onClick={() => handleClick(article.slug)}
       className={classes.card}
     >
       <AspectRatio ratio={1920 / 1080}>
