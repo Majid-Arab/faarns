@@ -28,20 +28,22 @@ function Card({ image, name, testimonial, company, logo }: CardProps) {
           style={{ backgroundImage: `${image}` }}
         />
         <div className={classes.testimonial}>
-          <Text className={classes.icon} size="xs">
-            <IconQuoteFilled size={35} />
-          </Text>
-          <Text className={classes.message} size="lg">
-            {testimonial}
-          </Text>
+          <div>
+            <Text className={classes.icon} size="xs" mb={30}>
+              <IconQuoteFilled size={35} />
+            </Text>
+            <Text className={classes.message} size="xl">
+              {testimonial}
+            </Text>
+          </div>
           <div className={classes.company}>
             <div className="">
-              <Title order={3} className={classes.name} mb={2}>
+              <Title order={3} className={classes.name}>
                 {name}
               </Title>
-              <Title order={4} className={classes.company}>
+              <Text className={classes.message} size="lg">
                 {company}
-              </Title>
+              </Text>
             </div>
             <Image
               src={logo}
@@ -110,8 +112,8 @@ export function Testimonials() {
   ));
 
   return (
-    <div className="h-screen ">
-      <div className="relative">
+    <div className="h-screen flex items-center justify-center">
+      <div className="relative flex flex-col gap-5">
         <Image
           src="/assets/footerGradient.svg"
           alt="Background Gradient"
@@ -119,12 +121,17 @@ export function Testimonials() {
           height={500}
           className="absolute -z-1 object-center"
         />
-        <Text className="m-auto max-w-[250px] md:max-w-[280px] text text-xl md:text-[25px] text-center">
-          Don&apos;t take <ItalicText text="our" /> Word for it
-        </Text>
-        <Title className="capitalize text-3xl md:text-5xl text-center">
-          See what our <ItalicText text="Clients" /> say!
-        </Title>
+        <div>
+          <Text
+            mb={20}
+            className="m-auto max-w-[250px] md:max-w-[280px] text text-xl md:text-[25px] text-center"
+          >
+            Don&apos;t take <ItalicText text="our" /> Word for it
+          </Text>
+          <Title className="capitalize text-3xl md:text-5xl text-center">
+            See what our <ItalicText text="Clients" /> say!
+          </Title>
+        </div>
         <Carousel
           withIndicators
           slideSize={"100%"}
