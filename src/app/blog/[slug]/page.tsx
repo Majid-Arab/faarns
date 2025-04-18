@@ -5,9 +5,14 @@ import React from "react";
 import Blog from "@/components/blogs/Blog";
 import { notFound } from "next/navigation";
 import { blogData } from "../../../../type/data";
-import { BlogSlugProp } from "../../../../type/type";
+import { BlogSlug } from "../../../../type/type";
 
-export default function BlogPage({ params }: BlogSlugProp) {
+interface PageProps {
+  params: { slug: BlogSlug };
+  searchParams?: { [key: string]: string | string[] | undefined };
+}
+
+export default async function BlogPage({ params }: PageProps) {
   const { slug } = params;
   const blog = blogData[slug];
 
