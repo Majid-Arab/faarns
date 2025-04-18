@@ -18,15 +18,22 @@ export type BlogSlug =
   | "hawaii-beaches"
   | "mountains-at-night";
 
+export type BlogProps = {
+  readTime: string;
+  image: string;
+  intro: string;
+  description: string;
+};
+
 export type BlogPost = {
   title: string;
-  intro: string;
-  image: string;
   author: string;
   date: string;
   category: string;
-  description: string;
+  image: string;
   readTime: string;
+  intro: string;
+  description: string;
 };
 
 export type BlogSlugProp = {
