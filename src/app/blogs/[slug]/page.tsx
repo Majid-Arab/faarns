@@ -4,20 +4,31 @@ import Image from "next/image";
 import React from "react";
 import Blog from "@/components/blogs/Blog";
 import { notFound } from "next/navigation";
-import { blogData } from "../../../../type/data";
-import { BlogSlug } from "../../../../type/type";
+import { BlogPost } from "../../../../type/type";
 
 interface Props {
   params: { slug: string };
 }
 
-export default function BlogPage({ params }: Props) {
-  if (!(params.slug in blogData)) {
-    return notFound();
+async function getBlogPost(slug: string): Promise<BlogPost | null> {
+  try {
+    const res = await fetch(`http://localhost:3000/api/blogs/${slug}`);
+    if (!res.ok) return null;
+    return await res.json();
+  } catch (error) {
+    console.error("Failed to fetch blog post:", error);
+    return null;
   }
+}
 
-  const slug = params.slug as BlogSlug;
-  const blog = blogData[slug];
+export default async function BlogPage({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  const blog = await getBlogPost(params.slug);
+
+  if (!blog) return notFound();
 
   return (
     <div className="bg-white">
