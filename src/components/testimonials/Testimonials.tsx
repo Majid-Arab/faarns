@@ -1,8 +1,7 @@
 "use client";
 
 import { Carousel } from "@mantine/carousel";
-import { Button, Paper, Text, Title, useMantineTheme } from "@mantine/core";
-import { useMediaQuery } from "@mantine/hooks";
+import { Paper, Text, Title } from "@mantine/core";
 import classes from "./Testimonials.module.css";
 import ItalicText from "../ui/ItalicText";
 import Image from "next/image";
@@ -14,10 +13,6 @@ import {
 
 interface CardProps {
   image: string;
-  name: string;
-  company: string;
-  logo: string;
-  testimonial: string;
   name: string;
   company: string;
   logo: string;
