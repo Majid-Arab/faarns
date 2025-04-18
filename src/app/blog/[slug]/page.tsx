@@ -5,14 +5,14 @@ import React from "react";
 import Blog from "@/components/blogs/Blog";
 import { notFound } from "next/navigation";
 import { blogData } from "../../../../type/data";
-import { BlogPost } from "../../../../type/type";
+import { BlogPost, BlogSlug } from "../../../../type/type";
 
 type BlogSlugProp = {
-  params: Promise<{ slug: string }>;
+  params: { slug: BlogSlug };
 };
 
 export default async function BlogPage({ params }: BlogSlugProp) {
-  const { slug } = await params;
+  const { slug } = params;
   const blog: BlogPost | undefined = blogData[slug];
 
   if (!blog) return notFound();
@@ -84,7 +84,7 @@ export default async function BlogPage({ params }: BlogSlugProp) {
             readTime={blog.readTime}
             image={blog.image}
             intro={blog.intro}
-            content={blog.description}
+            description={blog.description}
           />
         </div>
       </div>
