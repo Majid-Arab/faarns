@@ -5,13 +5,19 @@ import React from "react";
 import Blog from "@/components/blogs/Blog";
 import { notFound } from "next/navigation";
 import { blogData } from "../../../../type/data";
-import { BlogSlugProp } from "../../../../type/type";
+import { BlogSlug } from "../../../../type/type";
 
-export default function BlogPage({ params }: BlogSlugProp) {
-  const { slug } = params;
+interface Props {
+  params: { slug: string };
+}
+
+export default function BlogPage({ params }: Props) {
+  if (!(params.slug in blogData)) {
+    return notFound();
+  }
+
+  const slug = params.slug as BlogSlug;
   const blog = blogData[slug];
-
-  if (!blog) return notFound();
 
   return (
     <div className="bg-white">
