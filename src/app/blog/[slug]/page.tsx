@@ -5,15 +5,15 @@ import React from "react";
 import Blog from "@/components/blogs/Blog";
 import { notFound } from "next/navigation";
 import { blogData } from "../../../../type/data";
-import { BlogPost, BlogSlug } from "../../../../type/type";
+import { BlogSlug } from "../../../../type/type";
 
 type BlogSlugProp = {
   params: { slug: BlogSlug };
 };
 
-export default async function BlogPage({ params }: BlogSlugProp) {
+export default function BlogPage({ params }: BlogSlugProp) {
   const { slug } = params;
-  const blog: BlogPost | undefined = blogData[slug];
+  const blog = blogData[slug];
 
   if (!blog) return notFound();
 
