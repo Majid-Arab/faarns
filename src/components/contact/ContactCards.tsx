@@ -1,10 +1,7 @@
-"use client";
-
-import { useState } from "react";
-import { Container, Card, Image } from "@mantine/core";
+import { Container, Card, Image, CardSection } from "@mantine/core";
 
 export default function ImageGallery() {
-  const [images] = useState([
+  const images = [
     "/assets/cosmic.jpeg",
     "/assets/custom-web.jpeg",
     "/assets/enagic-affiliate.jpeg",
@@ -12,7 +9,7 @@ export default function ImageGallery() {
     "/assets/potential.jpeg",
     "/assets/web-automation.jpeg",
     "/assets/words-to-visual.jpeg",
-  ]);
+  ];
 
   return (
     <Container className="flex flex-wrap lg:flex-nowrap w-full justify-center items-center gap-5 py-5">
@@ -21,21 +18,14 @@ export default function ImageGallery() {
           key={index}
           className="transform transition-all duration-300 hover:scale-105"
         >
-          <Card
-            styles={() => ({
-              root: {
-                borderRadius: "12px",
-                boxShadow: "0 0 12px 4px rgba(128, 0, 128, 0.3)",
-              },
-            })}
-          >
-            <Card.Section className="w-14 h-20">
+          <Card>
+            <CardSection className="w-14 h-20">
               <Image
                 src={src}
                 alt={`Image ${index + 1}`}
                 className="w-full h-full object-cover"
               />
-            </Card.Section>
+            </CardSection>
           </Card>
         </div>
       ))}

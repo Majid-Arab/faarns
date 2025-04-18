@@ -6,57 +6,90 @@ import {
   Container,
   Image,
   SimpleGrid,
+  Skeleton,
   Text,
 } from "@mantine/core";
 import classes from "./BlogCards.module.css";
 import { useRouter } from "next/navigation";
 import PaginationBar from "../ui/Pagination";
-
-const mockdata = [
-  {
-    title: "Top 10 places to visit in Norway this summer",
-    image:
-      "https://images.unsplash.com/photo-1527004013197-933c4bb611b3?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=720&q=80",
-    slug: "top-10",
-  },
-  {
-    title: "Best forests to visit in North America",
-    image:
-      "https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=720&q=80",
-    slug: "best-forests",
-  },
-  {
-    title: "Hawaii beaches review: better than you think",
-    image:
-      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=720&q=80",
-    slug: "hawaii-beaches",
-  },
-  {
-    title: "Mountains at night: 12 best locations to enjoy the view",
-    image:
-      "https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=720&q=80",
-    slug: "mountains-at-night",
-  },
-];
+import { useEffect, useState } from "react";
+import { BlogPost } from "../../../type/type";
 
 export function BlogCards() {
   const router = useRouter();
-  const handleClick = (slug: string) => {
-    router.push(`/blog/${slug}`);
+  const [posts, setPosts] = useState<BlogPost[]>([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState<string | null>(null);
+
+  useEffect(() => {
+    const fetchPosts = async () => {
+      try {
+        const response = await fetch("https://jsonfakery.com/blogs/random/6");
+        if (!response.ok) {
+          throw new Error("Failed to fetch blog posts");
+        }
+        const data = await response.json();
+        console.log("data", data);
+        setPosts(data);
+      } catch (err) {
+        setError(err instanceof Error ? err.message : "Unknown error");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchPosts();
+  }, []);
+
+  const handleClick = async (slug: string) => {
+    // router.push(`/blogs/random`);
+    try {
+      const response = await fetch("https://jsonfakery.com/blogs/random");
+      if (!response.ok) {
+        throw new Error("Failed to fetch blog posts");
+      }
+      const data = await response.json();
+      console.log("data", data);
+      setPosts(data);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Unknown error");
+    } finally {
+      setLoading(false);
+    }
   };
-  const cards = mockdata.map((article) => (
+
+  if (loading) {
+    return (
+      <Container fluid py="xl">
+        <SimpleGrid cols={{ base: 1, sm: 2 }}>
+          {[...Array(4)].map((_, index) => (
+            <Skeleton key={index} height={300} radius="md" />
+          ))}
+        </SimpleGrid>
+      </Container>
+    );
+  }
+
+  if (error) {
+    return (
+      <Container fluid py="xl">
+        <Text c="red">{error}</Text>
+      </Container>
+    );
+  }
+
+  const cards = posts.map((article) => (
     <Card
       key={article.title}
       p="md"
       component="a"
       onClick={() => handleClick(article.slug)}
-      // href={handleClick}
       className={classes.card}
     >
       <AspectRatio ratio={1920 / 1080}>
         <Image
-          src={article.image}
-          alt={article.image}
+          src={article.featured_image}
+          alt={article.title}
           width={500}
           height={500}
           className="rounded-3xl"
@@ -71,7 +104,6 @@ export function BlogCards() {
       </Text>
     </Card>
   ));
-
   return (
     <Container fluid py="xl" className="flex flex-col items-center gap-2">
       <SimpleGrid cols={{ base: 1, sm: 2 }}>{cards}</SimpleGrid>

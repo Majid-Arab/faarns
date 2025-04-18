@@ -33,6 +33,16 @@
   width: 100%;
 }
 
+.inner {
+  display: flex;
+  gap: 30px;
+  height: 100%;
+}
+
+.imgBox {
+  height: auto;
+}
+
 .title {
   font-family:
     Greycliff CF,

@@ -4,19 +4,29 @@ import Image from "next/image";
 import React from "react";
 import Blog from "@/components/blogs/Blog";
 import { notFound } from "next/navigation";
-import { blogData } from "../../../../type/data";
 import { BlogPost } from "../../../../type/type";
 
-export type BlogSlug = keyof typeof blogData;
+interface Props {
+  params: { slug: string };
+}
 
-type BlogSlugProp = {
-  params: {
-    slug: BlogSlug;
-  };
-};
+async function getBlogPost(slug: string): Promise<BlogPost | null> {
+  try {
+    const res = await fetch(`http://localhost:3000/api/blogs/${slug}`);
+    if (!res.ok) return null;
+    return await res.json();
+  } catch (error) {
+    console.error("Failed to fetch blog post:", error);
+    return null;
+  }
+}
 
-const BlogPage = async ({ params }: BlogSlugProp) => {
-  const blog: BlogPost | undefined = blogData[params.slug];
+export default async function BlogPage({
+  params,
+}: {
+  params: { slug: string };
+}) {
+  const blog = await getBlogPost(params.slug);
 
   if (!blog) return notFound();
 
@@ -87,12 +97,10 @@ const BlogPage = async ({ params }: BlogSlugProp) => {
             readTime={blog.readTime}
             image={blog.image}
             intro={blog.intro}
-            content={blog.description}
+            description={blog.description}
           />
         </div>
       </div>
     </div>
   );
-};
-
-export default BlogPage;
+}

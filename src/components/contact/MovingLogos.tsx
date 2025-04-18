@@ -4,14 +4,6 @@ import React, { useEffect, useState, useRef } from "react";
 import Image from "next/image";
 import { cn } from "../../../lib/utils";
 
-export default function ClientLogos() {
-  return (
-    <div className="rounded-md flex flex-col antialiased items-center justify-center relative overflow-hidden">
-      <InfiniteMovingLogos direction="right" speed="slow" />
-    </div>
-  );
-}
-
 export const InfiniteMovingLogos = ({
   direction = "left",
   speed = "fast",
