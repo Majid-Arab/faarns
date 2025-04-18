@@ -5,11 +5,7 @@ import React from "react";
 import Blog from "@/components/blogs/Blog";
 import { notFound } from "next/navigation";
 import { blogData } from "../../../../type/data";
-import { BlogSlug } from "../../../../type/type";
-
-type BlogSlugProp = {
-  params: { slug: BlogSlug };
-};
+import { BlogSlugProp } from "../../../../type/type";
 
 export default function BlogPage({ params }: BlogSlugProp) {
   const { slug } = params;
