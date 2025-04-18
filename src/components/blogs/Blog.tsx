@@ -8,9 +8,9 @@ import {
   Text,
 } from "@mantine/core";
 import Image from "next/image";
-import { BlogsProp } from "../../../type/type";
+import { BlogProps } from "../../../type/type";
 
-const Blog = ({ readTime, image, intro, content }: BlogsProp) => {
+const Blog = ({ readTime, image, intro, description }: BlogProps) => {
   return (
     <Container fluid className="text-black mb-4">
       <Box className="w-full h-full md:h-full -mt-26 md:-mt-18">
@@ -37,7 +37,7 @@ const Blog = ({ readTime, image, intro, content }: BlogsProp) => {
           span={{ base: 12, md: 6 }}
           className="text-lg/2 md:text-2xl/3 tracking-wider mx-0 md:mx-3"
         >
-          {content}
+          {description}
         </GridCol>
         <GridCol span="auto">
           <Text className="font-semibold text-2xl text-center">Share</Text>

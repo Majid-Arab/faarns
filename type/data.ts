@@ -1,6 +1,6 @@
 import { BlogSlug, BlogPost } from "./type";
 
-export const blogData: Record<string, BlogPost> = {
+export const blogData: Record<BlogSlug, BlogPost> = {
   "top-10": {
     readTime: "22",
     title: "Top 10 places to visit in Norway this summer",
