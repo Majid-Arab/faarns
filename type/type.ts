@@ -30,6 +30,7 @@ export type BlogPost = {
   readTime: string;
   intro: string;
   description: string;
+  featured_image: string;
 };
 
 export type BlogSlugProp = {
