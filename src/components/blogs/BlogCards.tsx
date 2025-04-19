@@ -10,13 +10,11 @@ import {
   Text,
 } from "@mantine/core";
 import classes from "./BlogCards.module.css";
-import { useRouter } from "next/navigation";
 import PaginationBar from "../ui/Pagination";
 import { useEffect, useState } from "react";
 import { BlogPost } from "../../../type/type";
 
 export function BlogCards() {
-  const router = useRouter();
   const [posts, setPosts] = useState<BlogPost[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
