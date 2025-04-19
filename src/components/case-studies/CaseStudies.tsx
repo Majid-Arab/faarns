@@ -12,7 +12,7 @@ const CaseStudies = () => {
       <Grid justify="center" gutter={60}>
         <GridCol
           span={{ base: 12, md: 4 }}
-          className="sticky top-0 flex items-center justify-center md:items-end md:justify-end h-fit mt-1"
+          className="md:sticky top-0 flex items-center justify-center md:items-end md:justify-end h-fit mt-1"
         >
           {/* Background Image */}
           <Image
@@ -20,7 +20,7 @@ const CaseStudies = () => {
             alt="Image"
             height={500}
             width={500}
-            className="rounded-4xl top-2 md:top-0 border-4 border-white shadow-lg z-2"
+            className="rounded-4xl top-2 md:top-0 border-4 border-white shadow-lg mt-4 md:mt-0 z-2"
             style={{
               maxWidth: "100%",
               height: "auto",
@@ -33,7 +33,7 @@ const CaseStudies = () => {
             alt="Image"
             height={400}
             width={400}
-            className="rounded-4xl absolute -top-[2px] -right-[2px]"
+            className="rounded-4xl absolute top-12 md:-top-[2px] -right-[2px]"
             style={{
               maxWidth: "100%",
               height: "auto",
