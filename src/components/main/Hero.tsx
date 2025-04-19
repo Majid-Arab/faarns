@@ -5,7 +5,7 @@ import NeonLine from "./TubeLight";
 
 const Hero = () => {
   return (
-    <Box className="flex flex-col items-center justify-center h-screen">
+    <Box className="flex flex-col items-center py-4">
       <Box className="flex flex-col items-center justify-center gap-1">
         <Image
           src="/assets/logo.png"
