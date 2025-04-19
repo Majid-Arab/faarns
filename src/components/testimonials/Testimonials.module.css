@@ -1,17 +1,5 @@
-.slide {
-  transform: rotate(-5deg);
-
-  &[data-active] {
-    transform: rotate(0);
-  }
-}
-
-.slide:not([data-active]) {
-  transform: rotate(0);
-}
-
 .viewport {
-  overflow: visible;
+  /* overflow: visible; */
 }
 
 .card {
