@@ -1,0 +1,10 @@
+.control {
+  background-color: #000;
+  border: none;
+  color: #fff;
+  font-size: 18px;
+  &[data-active] {
+    background-color: #fff;
+    color: #000;
+  }
+}
