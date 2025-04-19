@@ -29,6 +29,10 @@ function Card({ image, name, testimonial, company, logo }: CardProps) {
         />
         <div className={classes.testimonial}>
           <div>
+            <div
+              className={classes.mobileImgBox}
+              style={{ backgroundImage: `${image}` }}
+            />
             <Text className={classes.icon} size="xs" mb={30}>
               <IconQuoteFilled size={35} />
             </Text>
@@ -140,7 +144,7 @@ export function Testimonials() {
           previousControlIcon={<IconArrowLeft />}
           align="start"
           classNames={classes}
-          style={{ maxWidth: "1000px", margin: "auto" }}
+          // style={{ maxWidth: "300px", margin: "auto" }}
           loop
         >
           {slides}

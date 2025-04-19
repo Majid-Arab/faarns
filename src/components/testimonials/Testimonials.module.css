@@ -1,5 +1,16 @@
-.viewport {
-  /* overflow: visible; */
+.root {
+  max-width: 1000px;
+  margin: auto;
+
+  @media (max-width: 1200px) {
+    max-width: 600px;
+  }
+  /* @media (max-width: 800px) {
+    max-width: 600px;
+  } */
+  @media (max-width: 450px) {
+    max-width: 400px;
+  }
 }
 
 .card {
@@ -20,6 +31,28 @@
   height: 400px;
   width: 450px;
   border-radius: 20px;
+
+  @media (max-width: 1200px) {
+    display: none;
+  }
+  @media (max-width: 450px) {
+    display: none;
+  }
+}
+
+.mobileImgBox {
+  /* display: none; */
+  background-image: url(/assets/blog.png);
+  height: 60px;
+  width: 60px;
+  border-radius: 100px;
+  background-position: center;
+  background-size: cover;
+
+  @media (max-width: 450px) {
+    /* display: block; */
+    /* border-radius: 100%; */
+  }
 }
 
 .testimonial {
@@ -28,6 +61,23 @@
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+}
+
+.message {
+  @media (max-width: 450px) {
+    font-size: 16px;
+  }
+}
+
+.name {
+  @media (max-width: 450px) {
+    font-size: 18px;
+  }
+}
+.company {
+  @media (max-width: 450px) {
+    font-size: 16px;
+  }
 }
 
 .company {
@@ -82,6 +132,10 @@
 .indicators {
   position: absolute;
   bottom: -80px;
+
+  @media (max-width: 450px) {
+    bottom: -5px;
+  }
 }
 
 .indicator {
