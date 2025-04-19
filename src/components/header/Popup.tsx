@@ -2,11 +2,7 @@ import {
   Popover,
   PopoverTarget,
   PopoverDropdown,
-  Avatar,
   Group,
-  Stack,
-  Anchor,
-  Text,
   UnstyledButton,
 } from "@mantine/core";
 import { IconDotsCircleHorizontal } from "@tabler/icons-react";
