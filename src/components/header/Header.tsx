@@ -3,29 +3,33 @@ import {
   IconBriefcase,
   IconBulbFilled,
   IconChartBar,
-  IconDotsCircleHorizontal,
   IconFolderOpen,
 } from "@tabler/icons-react";
 import Image from "next/image";
 import React from "react";
+import MorePopup from "./Popup";
+import Link from "next/link";
 
 export function Header() {
   return (
     <header className="flex items-center justify-between w-full fixed bottom-0 md:bottom-2 left-0 right-0 mx-auto py-1 px-0 md:px-2 text-white max-w-3xl rounded-lg border-2 border-b-0 border-purple-600 shadow-inner shadow-purple-300 z-30 bg-black">
       {/* Services Link */}
-      <a href="#services" className="hover:text-purple-600 transition-colors">
+      <Link
+        href="#services"
+        className="hover:text-purple-600 transition-colors"
+      >
         <IconBriefcase className="block md:hidden" size={20} />
         <span className="hidden md:block font-medium">Services</span>
-      </a>
+      </Link>
 
       {/* Case Studies Link */}
-      <a
+      <Link
         href="#case-studies"
         className="hover:text-purple-600 transition-colors"
       >
         <IconChartBar className="block md:hidden" size={20} />
         <span className="hidden md:block font-medium">Case Studies</span>
-      </a>
+      </Link>
 
       {/* CTA Button */}
       <Button
@@ -55,16 +59,16 @@ export function Header() {
       </Button>
 
       {/* Projects Link */}
-      <a href="#projects" className="hover:text-purple-600 transition-colorsr">
+      <Link
+        href="#projects"
+        className="hover:text-purple-600 transition-colorsr"
+      >
         <IconFolderOpen className="block md:hidden" size={20} />
         <span className="hidden md:block font-medium">Projects</span>
-      </a>
+      </Link>
 
       {/* More Link */}
-      <a href="#more" className="hover:text-purple-600 transition-colorsr">
-        <IconDotsCircleHorizontal className="block md:hidden" size={20} />
-        <span className="hidden md:block font-medium">More</span>
-      </a>
+      <MorePopup />
     </header>
   );
 }

@@ -21,11 +21,31 @@ const MorePopup = () => {
           <span className="hidden md:block font-medium">More</span>
         </UnstyledButton>
       </PopoverTarget>
-      <PopoverDropdown className="bg-black">
-        <Group>Blogs</Group>
-        <Group>Blogs</Group>
-        <Group>Blogs</Group>
-        <Group>Blogs</Group>
+      <PopoverDropdown className="bg-black border-purple-600 shadow-inner shadow-purple-300">
+        <Group>
+          <UnstyledButton
+            variant="default"
+            className="py-1 w-full hover:text-purple-600"
+          >
+            Contact us
+          </UnstyledButton>
+        </Group>
+        <Group>
+          <UnstyledButton
+            variant="default"
+            className="py-1 w-full hover:text-purple-600"
+          >
+            Our Blogs
+          </UnstyledButton>
+        </Group>
+        <Group>
+          <UnstyledButton
+            variant="default"
+            className="py-1 w-full hover:text-purple-600"
+          >
+            About Us
+          </UnstyledButton>
+        </Group>
       </PopoverDropdown>
     </Popover>
   );
