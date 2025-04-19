@@ -81,7 +81,7 @@ export function BlogCards() {
       key={article.title}
       p="md"
       component="a"
-      onClick={() => handleClick(article.slug)}
+      onClick={() => handleClick()}
       className={classes.card}
     >
       <AspectRatio ratio={1920 / 1080}>
