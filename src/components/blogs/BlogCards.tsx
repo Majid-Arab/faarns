@@ -39,7 +39,7 @@ export function BlogCards() {
     fetchPosts();
   }, []);
 
-  const handleClick = async (slug: string) => {
+  const handleClick = async () => {
     // router.push(`/blogs/random`);
     try {
       const response = await fetch("https://jsonfakery.com/blogs/random");
