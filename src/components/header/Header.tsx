@@ -1,7 +1,6 @@
 import { Button } from "@mantine/core";
 import {
   IconBriefcase,
-  IconBulbFilled,
   IconChartBar,
   IconFolderOpen,
 } from "@tabler/icons-react";
@@ -33,7 +32,15 @@ export function Header() {
 
       {/* CTA Button */}
       <Button
-        leftSection={<IconBulbFilled size={20} className="md:block" />}
+        leftSection={
+          <Image
+            src="/assets/bulb.png"
+            alt="Star"
+            width={500}
+            height={500}
+            className="md:block w-[20px] h-[25px]"
+          />
+        }
         radius="md"
         size="xl"
         variant="light"
@@ -49,7 +56,7 @@ export function Header() {
           className="w-6 h-6 absolute right-0 top-0"
         />
         <Image
-          src="/assets/bulb.svg"
+          src="/assets/bulb.png"
           alt="Star"
           width={500}
           height={500}
