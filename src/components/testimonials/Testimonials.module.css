@@ -1,3 +1,19 @@
+.slide {
+  transform: rotate(-5deg);
+
+  &[data-active] {
+    transform: rotate(0);
+  }
+}
+
+.slide:not([data-active]) {
+  transform: rotate(0);
+}
+
+.viewport {
+  overflow: visible;
+}
+
 .card {
   background-color: #fff;
   color: #000;
@@ -62,10 +78,6 @@
   text-transform: uppercase;
 }
 
-.slide {
-  /* position: absolute; */
-}
-
 .controls {
   margin-left: -30px;
   margin-right: -30px;
@@ -79,15 +91,21 @@
   padding: 3px;
 }
 
+.indicators {
+  position: absolute;
+  bottom: -80px;
+}
+
 .indicator {
   width: 25px;
   height: 4px;
   border: 1px solid #fff;
   padding: 5px;
-  background-color: rebeccapurple;
+  background-color: transparent;
   transition: width 250ms ease;
 
   &[data-active] {
     width: 65px;
+    background-color: #fff;
   }
 }
