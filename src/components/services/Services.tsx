@@ -1,5 +1,6 @@
 import { ServiceCard } from "@/components/services/ServiceCard";
 import { Button, Title } from "@mantine/core";
+import Image from "next/image";
 import React from "react";
 
 const Services = () => {
@@ -11,6 +12,13 @@ const Services = () => {
         variant="light"
         className="text-xl md:text-2xl text-white text-center flex justify-center items-center gap-2 transition-colors inset-shadow-sm inset-shadow-[#7057F1]"
       >
+        <Image
+          src="/assets/star.svg"
+          alt="Star"
+          width={500}
+          height={500}
+          className="w-6 h-6 absolute right-0 top-0"
+        />
         Our Services
       </Button>
 
