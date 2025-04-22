@@ -20,7 +20,7 @@ const ServiceCardItem = ({
     <div
       className="sticky h-screen"
       key={service.title}
-      style={{ top: `${50 + index * 40}px` }}
+      style={{ top: `${110 + index * 40}px` }}
     >
       <motion.div style={{ scale }}>
         <Card
@@ -30,14 +30,13 @@ const ServiceCardItem = ({
           radius="40"
           component="a"
           href="#"
+          style={{
+            backgroundImage: `url(${service.image})`,
+            backgroundRepeat: "no-repeat",
+            backgroundPosition: "center",
+            backgroundSize: "cover",
+          }}
         >
-          <motion.div
-            className={classes.image}
-            style={{
-              scale: ImageScale,
-              backgroundImage: `url(${service.image})`,
-            }}
-          />
           <div className={classes.overlay} />
 
           <div className={classes.content}>

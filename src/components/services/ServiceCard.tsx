@@ -1,10 +1,12 @@
 "use client";
 
 import { Box } from "@mantine/core";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import { useScroll } from "motion/react";
 import { cardsData } from "../../../type/data";
 import ServiceCardItem from "./ServiceCardItem";
+import Lenis from "lenis";
+import "lenis/dist/lenis.css";
 
 export function ServiceCard() {
   const container = useRef(null);
@@ -13,21 +15,21 @@ export function ServiceCard() {
     offset: ["start start", "end end"],
   });
 
-  // useEffect(() => {
-  //   const lenis = new Lenis();
+  useEffect(() => {
+    const lenis = new Lenis({
+      autoRaf: true,
+    });
 
-  //   function raf(time) {
-  //     lenis.raf(time);
-  //     requestAnimationFrame(raf);
-  //   }
-  //   requestAnimationFrame(raf);
-  // }, []);
+    function raf(time: number) {
+      lenis.raf(time);
+      requestAnimationFrame(raf);
+    }
+
+    requestAnimationFrame(raf);
+  }, []);
 
   return (
-    <Box
-      ref={container}
-      className="flex flex-col gap-5 mx-2 lg:max-w-60 py-5 relative"
-    >
+    <Box ref={container} className="flex flex-col mx-2 lg:max-w-60 relative">
       {cardsData.map((service, index) => {
         const targetScale = 1 - (cardsData.length - index) * 0.05;
         return (

@@ -5,7 +5,7 @@ import React from "react";
 
 const Services = () => {
   return (
-    <div className="relative top-0 flex flex-col items-center justify-center gap-5 mt-10">
+    <div className="relative top-0 flex flex-col items-center justify-center gap-3 mt-10">
       <Button
         radius="xl"
         size="xl"
@@ -22,7 +22,7 @@ const Services = () => {
         Our Services
       </Button>
 
-      <Title order={1} className="text-3xl md:text-5xl text-center">
+      <Title order={1} className=" text-3xl md:text-5xl text-center">
         We create{" "}
         <span className="font-bold font-playfair italic text-[40px] md:text-[52px]">
           brand
