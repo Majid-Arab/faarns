@@ -1,3 +1,5 @@
+import { MotionValue } from "motion";
+
 // Header
 
 export type NavItem = {
@@ -64,4 +66,18 @@ export type BreadcrumbItem = {
 export type BreadcrumbProps = {
   items: BreadcrumbItem[];
   separator?: React.ReactNode;
+};
+
+// Services Cards
+
+export type ServicesCards = {
+  service: {
+    title: string;
+    image: string;
+    description: string;
+  };
+  index: number;
+  progress: MotionValue<number>;
+  range: number[];
+  targetScale: number;
 };

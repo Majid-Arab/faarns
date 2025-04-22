@@ -1,65 +1,46 @@
 "use client";
 
-import { Box, Card, Text } from "@mantine/core";
-import classes from "./ServiceCard.module.css";
+import { Box } from "@mantine/core";
 import { useRef } from "react";
-import { motion, useScroll, useTransform } from "motion/react";
+import { useScroll } from "motion/react";
 import { cardsData } from "../../../type/data";
+import ServiceCardItem from "./ServiceCardItem";
 
 export function ServiceCard() {
   const container = useRef(null);
   const { scrollYProgress } = useScroll({
     target: container,
-    offset: ["start end", "start start"],
+    offset: ["start start", "end end"],
   });
 
-  // const targetScale = 1 - (cardsData.length - index) * 0.05;
-  const scale = useTransform(scrollYProgress, [0, 1], [2, 1]);
+  // useEffect(() => {
+  //   const lenis = new Lenis();
 
-  const cards = cardsData.map((service, index) => (
-    <div
-      className="sticky h-screen"
-      key={service.title}
-      style={{ top: `${50 + index * 40}px` }}
-    >
-      <Card
-        p="xl"
-        shadow="lg"
-        className={classes.card}
-        radius="40"
-        component="a"
-        href="#"
-      >
-        <motion.div
-          className={classes.image}
-          style={{
-            scale,
-            backgroundImage: `url(${service.image})`,
-          }}
-        />
-        <div className={classes.overlay} />
-
-        <div className={classes.content}>
-          <div>
-            <Text size="lg" className={classes.title} fw={800}>
-              {service.title}
-            </Text>
-
-            <Text size="sm" className={classes.description}>
-              {service.description}
-            </Text>
-          </div>
-        </div>
-      </Card>
-    </div>
-  ));
+  //   function raf(time) {
+  //     lenis.raf(time);
+  //     requestAnimationFrame(raf);
+  //   }
+  //   requestAnimationFrame(raf);
+  // }, []);
 
   return (
     <Box
       ref={container}
       className="flex flex-col gap-5 mx-2 lg:max-w-60 py-5 relative"
     >
-      {cards}
+      {cardsData.map((service, index) => {
+        const targetScale = 1 - (cardsData.length - index) * 0.05;
+        return (
+          <ServiceCardItem
+            key={service.title}
+            service={service}
+            index={index}
+            progress={scrollYProgress}
+            targetScale={targetScale}
+            range={[index * 0.25, 1]}
+          />
+        );
+      })}
     </Box>
   );
 }
