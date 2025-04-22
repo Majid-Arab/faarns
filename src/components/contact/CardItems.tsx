@@ -30,6 +30,8 @@ const CardItems = ({ index, src, offset }: Prop) => {
             src={src}
             alt={`Image ${index + 1}`}
             className="w-full h-full object-cover"
+            width={500}
+            height={500}
           />
         </CardSection>
       </Card>
