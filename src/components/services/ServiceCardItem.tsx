@@ -10,11 +10,11 @@ const ServiceCardItem = ({
   range,
   targetScale,
 }: ServicesCards) => {
-  const ImageScale = useTransform(
-    progress,
-    [index * 0.05, 1],
-    [targetScale, 1],
-  );
+  // const ImageScale = useTransform(
+  //   progress,
+  //   [index * 0.05, 1],
+  //   [targetScale, 1],
+  // );
   const scale = useTransform(progress, range, [1, targetScale]);
   return (
     <div
