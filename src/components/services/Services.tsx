@@ -5,7 +5,7 @@ import React from "react";
 
 const Services = () => {
   return (
-    <div className="flex flex-col items-center justify-center gap-5 mt-10">
+    <div className="relative top-0 flex flex-col items-center justify-center gap-5 mt-10">
       <Button
         radius="xl"
         size="xl"
