@@ -13,8 +13,10 @@ export function ServiceCard() {
     offset: ["start end", "start start"],
   });
 
+  // const targetScale = 1 - (cardsData.length - index) * 0.05;
   const scale = useTransform(scrollYProgress, [0, 1], [2, 1]);
-  const cards = mockdata.map((service, index) => (
+
+  const cards = cardsData.map((service, index) => (
     <div
       className="sticky h-screen"
       key={service.title}
@@ -53,7 +55,10 @@ export function ServiceCard() {
   ));
 
   return (
-    <Box className="flex flex-col gap-5 mx-2 lg:max-w-60 py-5 relative">
+    <Box
+      ref={container}
+      className="flex flex-col gap-5 mx-2 lg:max-w-60 py-5 relative"
+    >
       {cards}
     </Box>
   );
