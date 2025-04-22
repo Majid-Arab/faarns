@@ -11,8 +11,8 @@ type Prop = {
   offset: number;
 };
 
-const containerRef = useRef();
 const CardItems = ({ index, src, offset }: Prop) => {
+  const containerRef = useRef();
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start end", "end start"],
