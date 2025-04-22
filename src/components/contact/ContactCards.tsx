@@ -14,9 +14,8 @@ export function ImageGallery() {
     { src: "/assets/words-to-visual.jpeg", offset: -100 },
   ];
 
-  const containerRef = useRef();
+  const containerRef = useRef<HTMLDivElement | null>(null);
 
-  // const y = useTransform(scrollYProgress, [0, 1], [0, offset]);
   return (
     <div
       ref={containerRef}

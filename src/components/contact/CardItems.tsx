@@ -12,7 +12,7 @@ type Prop = {
 };
 
 const CardItems = ({ index, src, offset }: Prop) => {
-  const containerRef = useRef();
+  const containerRef = useRef<HTMLDivElement | null>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
     offset: ["start end", "end start"],
