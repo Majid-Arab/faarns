@@ -1,7 +1,5 @@
 "use client";
 
-import { Card, Image, CardSection } from "@mantine/core";
-import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
 import CardItems from "./CardItems";
 
