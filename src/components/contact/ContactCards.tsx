@@ -23,7 +23,9 @@ export function ImageGallery() {
       className="flex flex-wrap lg:flex-nowrap w-full justify-center items-center gap-5 py-5"
     >
       {images.map(({ src, offset }, index) => {
-        return <CardItems index={index} src={src} offset={offset} />;
+        return (
+          <CardItems key={index} index={index} src={src} offset={offset} />
+        );
       })}
     </div>
   );
