@@ -3,6 +3,7 @@
 import { Card, Image, CardSection } from "@mantine/core";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
+import CardItems from "./CardItems";
 
 export function ImageGallery() {
   const images = [
@@ -16,10 +17,6 @@ export function ImageGallery() {
   ];
 
   const containerRef = useRef();
-  const { scrollYProgress } = useScroll({
-    target: containerRef,
-    offset: ["start end", "end start"],
-  });
 
   // const y = useTransform(scrollYProgress, [0, 1], [0, offset]);
   return (
@@ -28,25 +25,7 @@ export function ImageGallery() {
       className="flex flex-wrap lg:flex-nowrap w-full justify-center items-center gap-5 py-5"
     >
       {images.map(({ src, offset }, index) => {
-        const y = useTransform(scrollYProgress, [0, 1], [0, offset]);
-
-        return (
-          <motion.div
-            key={index}
-            style={{ y }}
-            className="transform transition-all duration-300 hover:scale-105 -z-1"
-          >
-            <Card>
-              <CardSection className="w-14 h-20">
-                <Image
-                  src={src}
-                  alt={`Image ${index + 1}`}
-                  className="w-full h-full object-cover"
-                />
-              </CardSection>
-            </Card>
-          </motion.div>
-        );
+        return <CardItems index={index} src={src} offset={offset} />;
       })}
     </div>
   );
