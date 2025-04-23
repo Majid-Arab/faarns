@@ -10,7 +10,9 @@ import "./globals.css";
 import { Header } from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
 import BacktoTop from "@/components/ui/BacktoTop";
+import "lenis/dist/lenis.css";
 import "@mantine/carousel/styles.css";
+import LenisProvider from "../../type/LenisProvider";
 
 const redHatDisplay = Red_Hat_Display({
   subsets: ["latin"],
@@ -35,6 +37,7 @@ export default function RootLayout({
       </head>
       <body className={redHatDisplay.variable}>
         <MantineProvider theme={theme}>
+          <LenisProvider children={children} />
           <Header />
           {children}
           <BacktoTop />
