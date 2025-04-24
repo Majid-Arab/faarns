@@ -81,3 +81,13 @@ export type ServicesCards = {
   range: number[];
   targetScale: number;
 };
+
+// Our Work Images
+
+export type OurWorkImages = {
+  index: number;
+  src: string;
+  progress: MotionValue<number>;
+  offset: number;
+  rotate: number;
+};
