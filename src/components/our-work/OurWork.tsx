@@ -6,7 +6,7 @@ import { LeftGallery, RightGallery } from "./Images";
 
 const OurWork = () => {
   return (
-    <div className="h-80 py-8 bg-white rounded-2xl flex justify-center relative">
+    <div className="h-80 py-8 bg-white rounded-2xl flex justify-center relative overflow-x-hidden">
       {/* Left Images  */}
       <LeftGallery />
 

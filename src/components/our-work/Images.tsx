@@ -2,15 +2,20 @@
 
 import { useRef } from "react";
 import { LeftImages, RightImages } from "./ImageItems";
+import { useScroll } from "motion/react";
 
 export function LeftGallery() {
   const imagesLeft = [
-    { src: "/assets/cosmic.jpeg", offset: -600, rotate: 60 },
-    { src: "/assets/custom-web.jpeg", offset: -150, rotate: 40 },
-    { src: "/assets/enagic-affiliate.jpeg", offset: -350, rotate: 20 },
+    { src: "/assets/cosmic.jpeg", offset: 400, rotate: 50 },
+    { src: "/assets/custom-web.jpeg", offset: 200, rotate: 30 },
+    { src: "/assets/enagic-affiliate.jpeg", offset: 100, rotate: 10 },
   ];
 
   const containerRef = useRef<HTMLDivElement | null>(null);
+  const { scrollXProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end end"],
+  });
 
   return (
     <div
@@ -23,6 +28,7 @@ export function LeftGallery() {
             key={index}
             index={index}
             src={src}
+            progress={scrollXProgress}
             offset={offset}
             rotate={rotate}
           />
@@ -34,12 +40,16 @@ export function LeftGallery() {
 
 export function RightGallery() {
   const imagesRight = [
-    { src: "/assets/faarns.jpeg", offset: -650, rotate: 60 },
-    { src: "/assets/potential.jpeg", offset: -250, rotate: 40 },
-    { src: "/assets/web-automation.jpeg", offset: -450, rotate: 20 },
+    { src: "/assets/faarns.jpeg", offset: -400, rotate: 50 },
+    { src: "/assets/potential.jpeg", offset: -200, rotate: 30 },
+    { src: "/assets/web-automation.jpeg", offset: -100, rotate: 10 },
   ];
 
   const containerRef = useRef<HTMLDivElement | null>(null);
+  const { scrollXProgress } = useScroll({
+    target: containerRef,
+    offset: ["start start", "end end"],
+  });
 
   return (
     <div
@@ -52,6 +62,7 @@ export function RightGallery() {
             key={index}
             index={index}
             src={src}
+            progress={scrollXProgress}
             offset={offset}
             rotate={rotate}
           />

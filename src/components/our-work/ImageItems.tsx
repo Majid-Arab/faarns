@@ -1,28 +1,22 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "motion/react";
+import { motion, useTransform } from "motion/react";
 import Image from "next/image";
-import React, { useRef } from "react";
+import { OurWorkImages } from "../../../type/type";
 
-type Prop = {
-  index: number;
-  src: string;
-  offset: number;
-  rotate: number;
-};
+export function LeftImages({
+  index,
+  src,
+  progress,
+  offset,
+  rotate,
+}: OurWorkImages) {
+  const leftX = useTransform(progress, [0, 1], [0, offset]);
+  const rotateX = useTransform(progress, [0, 1], [0, rotate]);
 
-export function LeftImages({ index, src, offset, rotate }: Prop) {
-  const containerRef = useRef<HTMLDivElement | null>(null);
-  const { scrollXProgress } = useScroll({
-    target: containerRef,
-    offset: ["start end", "end start"],
-  });
-  const leftX = useTransform(scrollXProgress, [0, 1], [0, offset]);
-  const rotateX = useTransform(scrollXProgress, [0, 1], [0, rotate]);
   return (
     <motion.div
-      ref={containerRef}
-      style={{ x: leftX, rotateX }}
+      style={{ x: leftX, rotate: rotateX }}
       //   className="flex flex-col gap-20 md:gap-2 md:absolute right-20"
     >
       <Image
@@ -39,18 +33,20 @@ export function LeftImages({ index, src, offset, rotate }: Prop) {
   );
 }
 
-export function RightImages({ index, src, offset, rotate }: Prop) {
-  const containerRef = useRef<HTMLDivElement | null>(null);
-  const { scrollXProgress } = useScroll({
-    target: containerRef,
-    offset: ["start end", "end start"],
-  });
-  const rightX = useTransform(scrollXProgress, [0, 1], [0, offset]);
-  const rotateX = useTransform(scrollXProgress, [0, 1], [0, -rotate]);
+export function RightImages({
+  index,
+  src,
+  progress,
+  offset,
+  rotate,
+}: OurWorkImages) {
+  const rightX = useTransform(progress, [0, 1], [0, offset]);
+  const rotateX = useTransform(progress, [0, 1], [0, -rotate]);
+
   return (
     <motion.div
-      ref={containerRef}
-      style={{ x: rightX, rotateX }}
+      style={{ x: rightX, rotate: rotateX }}
+      // className="-rotate-6"
       //   className="flex flex-col gap-20 md:gap-2 md:absolute right-20"
     >
       <Image
