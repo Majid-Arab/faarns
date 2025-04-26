@@ -88,6 +88,7 @@ export type OurWorkImages = {
   index: number;
   src: string;
   progress: MotionValue<number>;
-  offset: number;
+  offsetX: number;
+  offsetY: number;
   rotate: number;
 };
