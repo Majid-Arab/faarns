@@ -25,7 +25,7 @@ export function LeftGallery() {
   return (
     <div
       ref={containerRef}
-      className="flex flex-col gap-10 md:gap-2 md:absolute top-5 md:top-30 right-20"
+      className="flex flex-col gap-10 md:gap-2 md:absolute top-5 md:top-15 right-20"
     >
       {imagesLeft.map(({ src, offsetX, offsetY, rotate }, index) => {
         return (
@@ -65,7 +65,7 @@ export function RightGallery() {
   return (
     <div
       ref={containerRef}
-      className="flex flex-col gap-20 md:gap-2 absolute top-5 md:top-30 left-20"
+      className="flex flex-col gap-20 md:gap-2 absolute top-5 md:top-15 left-20"
     >
       {imagesRight.map(({ src, offsetX, offsetY, rotate }, index) => {
         return (

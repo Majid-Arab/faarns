@@ -6,12 +6,12 @@ import { LeftGallery, RightGallery } from "./Images";
 
 const OurWork = () => {
   return (
-    <div className="h-80 py-8 bg-white rounded-2xl flex justify-center relative overflow-x-hidden">
+    <div className="h-80 pt-10 bg-white rounded-2xl flex justify-center relative overflow-x-hidden">
       {/* Left Images  */}
       <LeftGallery />
 
       {/* Centered Content  */}
-      <div className="bg-white rounded-2xl flex flex-col justify-center items-center gap-2">
+      <div className="rounded-2xl flex flex-col justify-start items-center gap-2 m-10 ">
         <Image
           src="/assets/dots.png"
           alt="Dots"
