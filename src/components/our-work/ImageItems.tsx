@@ -28,7 +28,7 @@ export function LeftImages({
         alt={`Image ${index + 1}`}
         height={500}
         width={500}
-        className="max-w-[500px] h-20 rounded-md hidden md:block"
+        className="max-w-[500px] max-h-60 h-20 rounded-md md:block"
         style={{
           maxWidth: "100%",
           maxHeight: "20%",
@@ -62,7 +62,7 @@ export function RightImages({
         alt={`Image ${index + 1}`}
         width={500}
         height={500}
-        className="max-w-[500px] h-20 rounded-md hidden md:block"
+        className="max-w-[500px] max-h-60 h-20 rounded-md md:block"
         style={{
           maxWidth: "100%",
           maxHeight: "20%",
