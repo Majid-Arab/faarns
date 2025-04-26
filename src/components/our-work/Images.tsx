@@ -6,7 +6,7 @@ import { useScroll } from "motion/react";
 
 export function LeftGallery() {
   const imagesLeft = [
-    { src: "/assets/cosmic.jpeg", offsetX: 300, offsetY: -100, rotate: 10 },
+    { src: "/assets/cosmic.jpeg", offsetX: 350, offsetY: -100, rotate: 10 },
     { src: "/assets/custom-web.jpeg", offsetX: 380, offsetY: -200, rotate: 10 },
     {
       src: "/assets/enagic-affiliate.jpeg",
@@ -25,7 +25,7 @@ export function LeftGallery() {
   return (
     <div
       ref={containerRef}
-      className="flex flex-col gap-20 md:gap-2 md:absolute right-20"
+      className="flex flex-col gap-10 md:gap-2 md:absolute top-5 md:top-30 right-20"
     >
       {imagesLeft.map(({ src, offsetX, offsetY, rotate }, index) => {
         return (
@@ -46,7 +46,7 @@ export function LeftGallery() {
 
 export function RightGallery() {
   const imagesRight = [
-    { src: "/assets/faarns.jpeg", offsetX: -300, offsetY: -100, rotate: 10 },
+    { src: "/assets/faarns.jpeg", offsetX: -350, offsetY: -100, rotate: 10 },
     { src: "/assets/potential.jpeg", offsetX: -380, offsetY: -200, rotate: 10 },
     {
       src: "/assets/web-automation.jpeg",
@@ -65,7 +65,7 @@ export function RightGallery() {
   return (
     <div
       ref={containerRef}
-      className="flex flex-col gap-20 md:gap-2 absolute left-20"
+      className="flex flex-col gap-20 md:gap-2 absolute top-5 md:top-30 left-20"
     >
       {imagesRight.map(({ src, offsetX, offsetY, rotate }, index) => {
         return (
