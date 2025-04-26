@@ -1,24 +1,28 @@
 "use client";
 
-import { motion, useTransform } from "motion/react";
+import { motion, useScroll, useTransform } from "motion/react";
 import Image from "next/image";
 import { OurWorkImages } from "../../../type/type";
+import { useRef } from "react";
 
 export function LeftImages({
   index,
   src,
-  progress,
-  offset,
+  offsetX,
+  offsetY,
   rotate,
 }: OurWorkImages) {
-  const leftX = useTransform(progress, [0, 1], [0, offset]);
-  const rotateX = useTransform(progress, [0, 1], [0, rotate]);
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end end"],
+  });
+  const x = useTransform(scrollYProgress, [0, 1], [0, offsetX]);
+  const y = useTransform(scrollYProgress, [0, 1], [0, offsetY]);
+  const rotateValue = useTransform(scrollYProgress, [0, 1], [0, rotate]);
 
   return (
-    <motion.div
-      style={{ x: leftX, rotate: rotateX }}
-      //   className="flex flex-col gap-20 md:gap-2 md:absolute right-20"
-    >
+    <motion.div ref={containerRef} style={{ x, y, rotate: rotateValue }}>
       <Image
         src={src}
         alt={`Image ${index + 1}`}
@@ -27,6 +31,8 @@ export function LeftImages({
         className="max-w-[500px] h-20 rounded-md hidden md:block"
         style={{
           maxWidth: "100%",
+          maxHeight: "20%",
+          objectFit: "cover",
         }}
       />
     </motion.div>
@@ -36,19 +42,21 @@ export function LeftImages({
 export function RightImages({
   index,
   src,
-  progress,
-  offset,
+  offsetX,
+  offsetY,
   rotate,
 }: OurWorkImages) {
-  const rightX = useTransform(progress, [0, 1], [0, offset]);
-  const rotateX = useTransform(progress, [0, 1], [0, -rotate]);
+  const containerRef = useRef<HTMLDivElement | null>(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end end"],
+  });
+  const x = useTransform(scrollYProgress, [0, 1], [0, offsetX]);
+  const y = useTransform(scrollYProgress, [0, 1], [0, offsetY]);
+  const rotateValue = useTransform(scrollYProgress, [0, 1], [0, -rotate]);
 
   return (
-    <motion.div
-      style={{ x: rightX, rotate: rotateX }}
-      // className="-rotate-6"
-      //   className="flex flex-col gap-20 md:gap-2 md:absolute right-20"
-    >
+    <motion.div ref={containerRef} style={{ x, y, rotate: rotateValue }}>
       <Image
         src={src}
         alt={`Image ${index + 1}`}
@@ -57,6 +65,8 @@ export function RightImages({
         className="max-w-[500px] h-20 rounded-md hidden md:block"
         style={{
           maxWidth: "100%",
+          maxHeight: "20%",
+          objectFit: "cover",
         }}
       />
     </motion.div>

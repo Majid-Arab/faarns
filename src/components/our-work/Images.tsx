@@ -6,15 +6,20 @@ import { useScroll } from "motion/react";
 
 export function LeftGallery() {
   const imagesLeft = [
-    { src: "/assets/cosmic.jpeg", offset: 400, rotate: 50 },
-    { src: "/assets/custom-web.jpeg", offset: 200, rotate: 30 },
-    { src: "/assets/enagic-affiliate.jpeg", offset: 100, rotate: 10 },
+    { src: "/assets/cosmic.jpeg", offsetX: 300, offsetY: -100, rotate: 10 },
+    { src: "/assets/custom-web.jpeg", offsetX: 380, offsetY: -200, rotate: 10 },
+    {
+      src: "/assets/enagic-affiliate.jpeg",
+      offsetX: 480,
+      offsetY: -300,
+      rotate: 10,
+    },
   ];
 
   const containerRef = useRef<HTMLDivElement | null>(null);
-  const { scrollXProgress } = useScroll({
+  const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start start", "end end"],
+    offset: ["start end", "end end"],
   });
 
   return (
@@ -22,14 +27,15 @@ export function LeftGallery() {
       ref={containerRef}
       className="flex flex-col gap-20 md:gap-2 md:absolute right-20"
     >
-      {imagesLeft.map(({ src, offset, rotate }, index) => {
+      {imagesLeft.map(({ src, offsetX, offsetY, rotate }, index) => {
         return (
           <LeftImages
             key={index}
             index={index}
             src={src}
-            progress={scrollXProgress}
-            offset={offset}
+            progress={scrollYProgress}
+            offsetX={offsetX}
+            offsetY={offsetY}
             rotate={rotate}
           />
         );
@@ -40,15 +46,20 @@ export function LeftGallery() {
 
 export function RightGallery() {
   const imagesRight = [
-    { src: "/assets/faarns.jpeg", offset: -400, rotate: 50 },
-    { src: "/assets/potential.jpeg", offset: -200, rotate: 30 },
-    { src: "/assets/web-automation.jpeg", offset: -100, rotate: 10 },
+    { src: "/assets/faarns.jpeg", offsetX: -300, offsetY: -100, rotate: 10 },
+    { src: "/assets/potential.jpeg", offsetX: -380, offsetY: -200, rotate: 10 },
+    {
+      src: "/assets/web-automation.jpeg",
+      offsetX: -480,
+      offsetY: -300,
+      rotate: 10,
+    },
   ];
 
   const containerRef = useRef<HTMLDivElement | null>(null);
-  const { scrollXProgress } = useScroll({
+  const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start start", "end end"],
+    offset: ["start end", "end end"],
   });
 
   return (
@@ -56,14 +67,15 @@ export function RightGallery() {
       ref={containerRef}
       className="flex flex-col gap-20 md:gap-2 absolute left-20"
     >
-      {imagesRight.map(({ src, offset, rotate }, index) => {
+      {imagesRight.map(({ src, offsetX, offsetY, rotate }, index) => {
         return (
           <RightImages
             key={index}
             index={index}
             src={src}
-            progress={scrollXProgress}
-            offset={offset}
+            progress={scrollYProgress}
+            offsetX={offsetX}
+            offsetY={offsetY}
             rotate={rotate}
           />
         );
