@@ -4,9 +4,9 @@ import { useEffect } from "react";
 import Lenis from "lenis";
 
 export default function LenisProvider({
-  children,
+  childrens,
 }: {
-  children: React.ReactNode;
+  childrens: React.ReactNode;
 }) {
   useEffect(() => {
     const lenis = new Lenis({
@@ -26,5 +26,5 @@ export default function LenisProvider({
     };
   }, []);
 
-  return <>{children}</>;
+  return <>{childrens}</>;
 }

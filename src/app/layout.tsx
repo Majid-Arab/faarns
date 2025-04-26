@@ -37,7 +37,7 @@ export default function RootLayout({
       </head>
       <body className={redHatDisplay.variable}>
         <MantineProvider theme={theme}>
-          <LenisProvider children={children} />
+          <LenisProvider childrens={children} />
           <Header />
           {children}
           <BacktoTop />
