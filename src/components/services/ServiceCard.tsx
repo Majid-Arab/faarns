@@ -1,7 +1,7 @@
 "use client";
 
 import { Box } from "@mantine/core";
-import { useEffect, useRef } from "react";
+import { useRef } from "react";
 import { useScroll } from "motion/react";
 import { cardsData } from "../../../type/data";
 import ServiceCardItem from "./ServiceCardItem";
