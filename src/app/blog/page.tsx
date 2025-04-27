@@ -25,12 +25,12 @@ export default async function BlogPage() {
             items={[
               { title: "Home", href: "/" },
               { title: "Blogs", href: "/blogs" },
-              { title: "Details", href: "Text here" },
+              { title: "Details", href: "/blog" },
             ]}
           />
           <div className="text-center ">
             <Title className="max-w-[300px] md:max-w-[800px] text-center text-2xl md:text-6xl ">
-              Text here
+              The World of AI
             </Title>
           </div>
           <Grid
@@ -44,7 +44,7 @@ export default async function BlogPage() {
                 Author
               </Text>
               <Title className="text-xl md:text-[30px] font-normal md:font-semibold">
-                Text here
+                Charlie
               </Title>
             </GridCol>
             <GridCol span={{ base: 6, md: 4 }} className="text-center">
@@ -52,7 +52,7 @@ export default async function BlogPage() {
                 Publish Date
               </Text>
               <Title className="text-xl md:text-[30px] font-normal md:font-semibold">
-                Text here
+                21 / May / 2025
               </Title>
             </GridCol>
             <GridCol span={{ base: 12, md: 4 }} className="text-center">
@@ -60,7 +60,7 @@ export default async function BlogPage() {
                 Category
               </Text>
               <Title className="text-xl md:text-[30px] font-normal md:font-semibold">
-                Text here
+                AI
               </Title>
             </GridCol>
           </Grid>
@@ -69,10 +69,10 @@ export default async function BlogPage() {
       <div className="flex justify-center">
         <div className="w-[1200px] mt-2 relative">
           <Blog
-            readTime="Text here"
+            readTime="22"
             image="/assets/blog.png"
-            intro="Text here"
-            description="Text here"
+            intro="Lorem ipsum dolor sit amet consectetur, adipisicing elit. Incidunt cumque provident sint autem et magni."
+            description="Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, corporis tenetur. Repellat iste tempore eum iusto possimus natus ipsa optio."
           />
         </div>
       </div>

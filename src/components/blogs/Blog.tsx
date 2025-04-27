@@ -19,7 +19,7 @@ const Blog = ({ readTime, image, intro, description }: BlogProps) => {
           alt="Blog"
           width={500}
           height={500}
-          className="h-[600px] md:h-auto w-full object-cover rounded-lg"
+          className="h-[300px] mt-5 md:mt-0 md:h-auto w-full object-cover rounded-lg"
         />
       </Box>
       <Grid justify="between" mt={40} gutter={{ base: 30, xs: "md", md: "xl" }}>
