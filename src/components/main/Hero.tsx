@@ -1,12 +1,16 @@
 import { Box, Button, Group } from "@mantine/core";
 import Image from "next/image";
 import React from "react";
-import NeonLine from "./TubeLight";
+import LightBtn from "./LightBtn";
 
 const Hero = () => {
   return (
-    <Box className="flex flex-col items-center pt-4 pb-8">
-      <Box className="flex flex-col items-center justify-center gap-1">
+    <Box className="relative flex flex-col items-center pt-4 pb-8 overflow-hidden">
+      {/* Background Gradients */}
+      <LightBtn />
+
+      {/* Main Content */}
+      <Box className="flex flex-col items-center justify-center gap-1 relative z-10">
         <Image
           src="/assets/logo.png"
           alt="Logo"
@@ -18,9 +22,8 @@ const Hero = () => {
             height: "auto",
           }}
         />
-        {/* // Animated Light Bar that'll stretch on hover */}
-        <NeonLine />
-        {/* Button  */}
+
+        {/* Button */}
         <Button
           variant="light"
           color="#fff"
@@ -31,8 +34,10 @@ const Hero = () => {
           Leading Marketing Agency
         </Button>
       </Box>
-      <Box className="leading-none">
-        <h1 className="text-7xl  sm:text-8xl md:text-[200px] lg:text-[300px] font-bold uppercase m-0 p-0">
+
+      {/* Title and Tags */}
+      <Box className="leading-none relative z-10">
+        <h1 className="text-7xl sm:text-8xl md:text-[200px] lg:text-[300px] font-bold uppercase m-0 p-0">
           Faarns
         </h1>
         <Group
