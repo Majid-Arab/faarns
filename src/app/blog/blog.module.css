@@ -1,0 +1,39 @@
+.wrapper {
+  position: relative;
+  overflow: hidden; /* move it here */
+  width: 400px;
+}
+
+.input {
+  background: #0202024d;
+  backdrop-filter: blur(30px);
+  border-color: var(--mantine-color-gray-4);
+  border-radius: var(--mantine-radius-xl);
+  color: var(--mantine-color-white);
+  font-size: 18px;
+  overflow: hidden; /* move it here */
+  padding: 20px 24px;
+  width: 100%;
+
+  &::placeholder {
+    color: var(--mantine-color-gray-5);
+  }
+
+  @media (max-width: 765px) {
+    font-size: 16px;
+    margin-top: 5px;
+  }
+}
+
+.searchIcon {
+  color: #000;
+  /* position: absolute; */
+  background-color: #fff;
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  width: 100px;
+  height: 40px;
+  padding: 5px 0;
+  border-radius: 0px 20px 20px 0px;
+}

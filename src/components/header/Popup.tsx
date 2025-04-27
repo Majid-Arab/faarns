@@ -1,3 +1,5 @@
+"use client";
+
 import {
   Popover,
   PopoverTarget,
@@ -6,9 +8,11 @@ import {
   UnstyledButton,
 } from "@mantine/core";
 import { IconDotsCircleHorizontal } from "@tabler/icons-react";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 const MorePopup = () => {
+  const router = useRouter();
   return (
     <Popover width={320} shadow="md" withArrow offset={30} radius="lg">
       <PopoverTarget>
@@ -29,9 +33,19 @@ const MorePopup = () => {
         <Group>
           <UnstyledButton
             variant="default"
+            onClick={() => router.push("/blogs")}
             className="py-1 w-full hover:text-purple-600"
           >
             Our Blogs
+          </UnstyledButton>
+        </Group>
+        <Group>
+          <UnstyledButton
+            variant="default"
+            onClick={() => router.push("/blog")}
+            className="py-1 w-full hover:text-purple-600"
+          >
+            Single Blog
           </UnstyledButton>
         </Group>
         <Group>

@@ -70,7 +70,7 @@ export default async function BlogPage() {
         <div className="w-[1200px] mt-2 relative">
           <Blog
             readTime="Text here"
-            image="Text here"
+            image="/assets/blog.png"
             intro="Text here"
             description="Text here"
           />
