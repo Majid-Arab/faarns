@@ -18,7 +18,7 @@ interface CardProps {
   testimonial: string;
 }
 
-const data = [
+const data: CardProps[] = [
   {
     image: "/assets/blog.png",
     testimonial: "Best forests to visit in North America",
@@ -45,19 +45,18 @@ const data = [
 function Card({ image, name, testimonial, company, logo }: CardProps) {
   return (
     <div className={classes.card}>
-      {/* <!-- Item 1 --> */}
       <div className={classes.inner}>
         <div
           className={classes.imgBox}
-          style={{ backgroundImage: `${image}` }}
+          style={{ backgroundImage: `url(${image})` }}
         />
         <div className={classes.testimonial}>
-          <div>
+          <div className={classes.testimonialWrapper}>
             <div
               className={classes.mobileImgBox}
-              style={{ backgroundImage: `${image}` }}
+              style={{ backgroundImage: `url(${image})` }}
             />
-            <Text className={classes.icon} size="xs" mb={30}>
+            <Text className="hidden md:block" size="xs">
               <IconQuoteFilled size={35} />
             </Text>
             <Text className={classes.message} size="xl">
@@ -65,20 +64,20 @@ function Card({ image, name, testimonial, company, logo }: CardProps) {
             </Text>
           </div>
           <div className={classes.company}>
-            <div className="">
+            <div>
               <Title order={3} className={classes.name}>
                 {name}
               </Title>
-              <Text className={classes.message} size="lg">
+              <Text className={classes.company} size="lg">
                 {company}
               </Text>
             </div>
             <Image
               src={logo}
-              alt="Background Gradient"
-              width={500}
-              height={500}
-              className="object-contain rounded- w-6 h-fit bg-black"
+              alt="Company logo"
+              width={40}
+              height={40}
+              className="object-cover w-6 h-fit bg-black"
             />
           </div>
         </div>
@@ -87,9 +86,8 @@ function Card({ image, name, testimonial, company, logo }: CardProps) {
   );
 }
 
-export function Testimonials() {
+export function Carousel() {
   const [activeIndex, setActiveIndex] = useState(0);
-  const slides = data.map((item) => <Card key={item.name} {...item} />);
 
   const handlePrev = () => {
     setActiveIndex((prev) => (prev - 1 + data.length) % data.length);
@@ -100,69 +98,41 @@ export function Testimonials() {
   };
 
   return (
-    <div className="relative flex flex-col items-center justify-center ">
-      <div id="default-carousel" className={classes.root} data-carousel="slide">
-        {/* <!-- Carousel wrapper --> */}
-        {slides}
-        {/* <!-- Slider indicators --> */}
-        <div className={classes.indicators}>
-          <button
-            type="button"
-            className={classes.indicator}
-            aria-current="true"
-            aria-label="Slide 1"
-            data-carousel-slide-to="0"
-          ></button>
-          <button
-            type="button"
-            className={classes.indicator}
-            aria-current="false"
-            aria-label="Slide 2"
-            data-carousel-slide-to="1"
-          ></button>
-          <button
-            type="button"
-            className={classes.indicator}
-            aria-current="false"
-            aria-label="Slide 3"
-            data-carousel-slide-to="2"
-          ></button>
-          <button
-            type="button"
-            className={classes.indicator}
-            aria-current="false"
-            aria-label="Slide 4"
-            data-carousel-slide-to="3"
-          ></button>
-          <button
-            type="button"
-            className={classes.indicator}
-            aria-current="false"
-            aria-label="Slide 5"
-            data-carousel-slide-to="4"
-          ></button>
-        </div>
-        {/* <!-- Slider controls --> */}
+    <div className="relative flex flex-col items-center justify-center">
+      <div id="carousel" className={classes.root}>
+        {data.map((item, index) => {
+          const isActive = index === activeIndex;
+          const isNext = index === (activeIndex + 1) % data.length;
+
+          return (
+            <div
+              key={item.name}
+              className={`${classes.slide} ${isActive ? classes.active : ""} ${isNext ? classes.next : ""}`}
+            >
+              <Card {...item} />
+            </div>
+          );
+        })}
+
+        {/* Controls */}
         <div className={classes.controls}>
-          <button
-            onClick={handlePrev}
-            type="button"
-            className={classes.control}
-            data-carousel-prev
-          >
-            <IconArrowLeft />
-            <span className="sr-only">Previous</span>
+          <button onClick={handlePrev} className={classes.control}>
+            <IconArrowLeft size={24} />
           </button>
-          <button
-            onClick={handleNext}
-            type="button"
-            className={classes.control}
-            data-carousel-next
-          >
-            <IconArrowRight />
-            <span className="sr-only">Next</span>
+          <button onClick={handleNext} className={classes.control}>
+            <IconArrowRight size={24} />
           </button>
         </div>
+      </div>
+      {/* Indicators */}
+      <div className={classes.indicators}>
+        {data.map((_, index) => (
+          <button
+            key={index}
+            onClick={() => setActiveIndex(index)}
+            className={`${classes.indicator} ${index === activeIndex ? classes.activeIndicator : ""}`}
+          />
+        ))}
       </div>
     </div>
   );
