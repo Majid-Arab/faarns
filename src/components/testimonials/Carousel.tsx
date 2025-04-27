@@ -1,14 +1,22 @@
 "use client";
 
 import { useState } from "react";
-import { Paper, Text, Title, Button } from "@mantine/core";
 import {
   IconArrowLeft,
   IconArrowRight,
   IconQuoteFilled,
 } from "@tabler/icons-react";
 import Image from "next/image";
-import styles from "./Testimonials.module.css";
+import classes from "./Testimonials.module.css";
+import { Text, Title } from "@mantine/core";
+
+interface CardProps {
+  image: string;
+  name: string;
+  company: string;
+  logo: string;
+  testimonial: string;
+}
 
 const data = [
   {
@@ -34,8 +42,54 @@ const data = [
   },
 ];
 
-export default function StackedCarousel() {
+function Card({ image, name, testimonial, company, logo }: CardProps) {
+  return (
+    <div className={classes.card}>
+      {/* <!-- Item 1 --> */}
+      <div className={classes.inner}>
+        <div
+          className={classes.imgBox}
+          style={{ backgroundImage: `${image}` }}
+        />
+        <div className={classes.testimonial}>
+          <div>
+            <div
+              className={classes.mobileImgBox}
+              style={{ backgroundImage: `${image}` }}
+            />
+            <Text className={classes.icon} size="xs" mb={30}>
+              <IconQuoteFilled size={35} />
+            </Text>
+            <Text className={classes.message} size="xl">
+              {testimonial}
+            </Text>
+          </div>
+          <div className={classes.company}>
+            <div className="">
+              <Title order={3} className={classes.name}>
+                {name}
+              </Title>
+              <Text className={classes.message} size="lg">
+                {company}
+              </Text>
+            </div>
+            <Image
+              src={logo}
+              alt="Background Gradient"
+              width={500}
+              height={500}
+              className="object-contain rounded- w-6 h-fit bg-black"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export function Testimonials() {
   const [activeIndex, setActiveIndex] = useState(0);
+  const slides = data.map((item) => <Card key={item.name} {...item} />);
 
   const handlePrev = () => {
     setActiveIndex((prev) => (prev - 1 + data.length) % data.length);
@@ -46,50 +100,69 @@ export default function StackedCarousel() {
   };
 
   return (
-    <div className="relative h-screen flex flex-col items-center justify-center overflow-hidden">
-      <div className="relative w-full max-w-xl h-[450px]">
-        {data.map((item, index) => {
-          const isActive = index === activeIndex;
-          return (
-            <Paper
-              key={index}
-              shadow="md"
-              p="xl"
-              radius="md"
-              className={`${styles.slide} ${isActive ? styles.active : ""}`}
-              style={{ zIndex: data.length - index }}
-            >
-              <div className="flex flex-col h-full justify-between">
-                <Text className="text-blue-500">
-                  <IconQuoteFilled size={30} />
-                </Text>
-                <Text className="text-xl">{item.testimonial}</Text>
-                <div className="flex items-center justify-between mt-5">
-                  <div>
-                    <Title order={3}>{item.name}</Title>
-                    <Text>{item.company}</Text>
-                  </div>
-                  <Image
-                    src={item.logo}
-                    alt="logo"
-                    width={40}
-                    height={40}
-                    className="rounded-full"
-                  />
-                </div>
-              </div>
-            </Paper>
-          );
-        })}
-      </div>
-
-      <div className="mt-5 flex gap-4">
-        <Button onClick={handlePrev} leftSection={<IconArrowLeft />}>
-          Prev
-        </Button>
-        <Button onClick={handleNext} rightSection={<IconArrowRight />}>
-          Next
-        </Button>
+    <div className="relative flex flex-col items-center justify-center ">
+      <div id="default-carousel" className={classes.root} data-carousel="slide">
+        {/* <!-- Carousel wrapper --> */}
+        {slides}
+        {/* <!-- Slider indicators --> */}
+        <div className={classes.indicators}>
+          <button
+            type="button"
+            className={classes.indicator}
+            aria-current="true"
+            aria-label="Slide 1"
+            data-carousel-slide-to="0"
+          ></button>
+          <button
+            type="button"
+            className={classes.indicator}
+            aria-current="false"
+            aria-label="Slide 2"
+            data-carousel-slide-to="1"
+          ></button>
+          <button
+            type="button"
+            className={classes.indicator}
+            aria-current="false"
+            aria-label="Slide 3"
+            data-carousel-slide-to="2"
+          ></button>
+          <button
+            type="button"
+            className={classes.indicator}
+            aria-current="false"
+            aria-label="Slide 4"
+            data-carousel-slide-to="3"
+          ></button>
+          <button
+            type="button"
+            className={classes.indicator}
+            aria-current="false"
+            aria-label="Slide 5"
+            data-carousel-slide-to="4"
+          ></button>
+        </div>
+        {/* <!-- Slider controls --> */}
+        <div className={classes.controls}>
+          <button
+            onClick={handlePrev}
+            type="button"
+            className={classes.control}
+            data-carousel-prev
+          >
+            <IconArrowLeft />
+            <span className="sr-only">Previous</span>
+          </button>
+          <button
+            onClick={handleNext}
+            type="button"
+            className={classes.control}
+            data-carousel-next
+          >
+            <IconArrowRight />
+            <span className="sr-only">Next</span>
+          </button>
+        </div>
       </div>
     </div>
   );

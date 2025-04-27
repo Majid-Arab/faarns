@@ -5,6 +5,7 @@ import { Paper, Text, Title } from "@mantine/core";
 import classes from "./Testimonials.module.css";
 import ItalicText from "../ui/ItalicText";
 import Image from "next/image";
+import { Testimonials as Test } from "@/components/testimonials/Carousel";
 import {
   IconArrowLeft,
   IconArrowRight,
@@ -136,7 +137,8 @@ export function Testimonials() {
             See what our <ItalicText text="Clients" /> say!
           </Title>
         </div>
-        <Carousel
+        <Test />
+        {/* <Carousel
           withIndicators
           slideSize={"100%"}
           slideGap={{ base: 4, sm: 0 }}
@@ -148,7 +150,7 @@ export function Testimonials() {
           loop
         >
           {slides}
-        </Carousel>
+        </Carousel> */}
       </div>
     </div>
   );
