@@ -16,7 +16,7 @@ const MorePopup = () => {
   return (
     <Popover width={320} shadow="md" withArrow offset={30} radius="lg">
       <PopoverTarget>
-        <UnstyledButton className="hover:text-purple-600 transition-colorsr">
+        <UnstyledButton className="hover:text-purple-600 transition-colors">
           <IconDotsCircleHorizontal className="block md:hidden" size={20} />
           <span className="hidden md:block font-medium">More</span>
         </UnstyledButton>

@@ -12,6 +12,7 @@ import BacktoTop from "@/components/ui/BacktoTop";
 import "lenis/dist/lenis.css";
 import "@mantine/carousel/styles.css";
 import LenisProvider from "../../type/LenisProvider";
+import { Header } from "@/components/header/Header";
 
 const redHatDisplay = Red_Hat_Display({
   subsets: ["latin"],
@@ -36,9 +37,8 @@ export default function RootLayout({
       </head>
       <body className={redHatDisplay.variable}>
         <MantineProvider theme={theme}>
-          {/* <Header /> */}
+          <Header />
           <LenisProvider childrens={children} />
-          {/* {children} */}
           <BacktoTop />
           <Footer />
         </MantineProvider>
