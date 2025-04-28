@@ -9,6 +9,15 @@ import Badges from "@/components/ui/Badges";
 import { BlogCards } from "@/components/blogs/BlogCards";
 
 const Hero = () => {
+  const badges = [
+    "Latest Blogs",
+    "Featured",
+    "UI/UX",
+    "Frontend",
+    "Saas & Co.",
+    "Faarns abc",
+    "Faarns abc",
+  ];
   return (
     <>
       <Box className="relative flex flex-col items-center justify-start h-20 md:h-36 bg-[url(/assets/blog-bg.png)] bg-cover md:bg-contain bg-center bg-no-repeat inset-shadow-sm inset-shadow-white ">
@@ -77,12 +86,9 @@ const Hero = () => {
       <div className="flex justify-center">
         <div className="w-[1400px] mx-auto my-2 relative">
           <Group gap={20} justify="center">
-            <Badges text="Latest Blogs" />
-            <Badges text="Latest Blogs" />
-            <Badges text="Latest Blogs" />
-            <Badges text="Latest Blogs" />
-            <Badges text="Latest Blogs" />
-            <Badges text="Latest Blogs" />
+            {badges.map((badge, index) => (
+              <Badges key={index} text={badge} />
+            ))}
           </Group>
           <BlogCards />
         </div>
