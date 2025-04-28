@@ -3,7 +3,7 @@ import { Badge, Card, Group, Text, Title } from "@mantine/core";
 
 export function CaseStudyCard() {
   return (
-    <Card bg="white" padding={0} radius="md" className="gap-1">
+    <Card bg="white" padding={0} radius="md" className="gap-1 p-xl">
       <Group className="text-cyan-950">
         <IconHomeFilled size={30} />
         <Text className="font-bold text-[22px]">Realtors</Text>
