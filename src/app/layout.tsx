@@ -7,7 +7,6 @@ import {
 import { Red_Hat_Display } from "next/font/google";
 import theme from "./theme";
 import "./globals.css";
-import { Header } from "@/components/header/Header";
 import Footer from "@/components/footer/Footer";
 import BacktoTop from "@/components/ui/BacktoTop";
 import "lenis/dist/lenis.css";
@@ -37,7 +36,7 @@ export default function RootLayout({
       </head>
       <body className={redHatDisplay.variable}>
         <MantineProvider theme={theme}>
-          <Header />
+          {/* <Header /> */}
           <LenisProvider childrens={children} />
           {/* {children} */}
           <BacktoTop />
