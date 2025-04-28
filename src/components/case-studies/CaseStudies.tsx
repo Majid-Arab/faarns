@@ -33,7 +33,7 @@ const CaseStudies = () => {
             alt="Image"
             height={400}
             width={400}
-            className="rounded-4xl absolute top-12 md:-top-[2px] -right-[2px]"
+            className="rounded-4xl absolute top-12 md:-top-[2px] md:-right-[2px]"
             style={{
               maxWidth: "100%",
               height: "auto",
